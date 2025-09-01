@@ -1,0 +1,145 @@
+#head-nav{
+width:960px;
+background-color:#AB1B28;
+border-top: solid 1px #80141e;
+border-bottom: solid 1px #80141e;
+float:left;
+}
+
+
+#head-nav li a:link{
+background-image: url('/css/white-link-bar.jpg');
+	background-position: right;
+ 	background-repeat: no-repeat;
+	display: block;
+}
+
+#head-nav li ul li a:link{
+	background-image:none;
+	
+	
+}
+ul.lastItem a:link{
+	background-image:none;
+	}
+ul.dropmenu{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	display:block;
+	font-family:Times New Roman, Times, serif;
+	font-size: 14px;
+	border-bottom: none;
+	border-right: none;
+	display: inline-block;
+	opacity: 0.94;
+	filter: alpha(opacity=94); /* For IE8 and earlier */
+}
+.dropmenu li{
+	position: relative;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	cursor: point;
+	float: left;
+	
+}
+.dropmenu li a{
+	padding: 11px 15px 10px 15px;
+	text-transform: uppercase;
+	display: block;
+	cursor: point;
+	
+ 	
+	/*border-right: solid 1px #80141e;*/
+	color: #FFF;
+	text-decoration: none;
+	background-color: #AB1B28;
+
+}
+.dropmenu li a:hover{
+	text-decoration: none;
+	background-color:#80141e;
+}
+.dropmenu li span{
+	display: block;
+	height: 0px;
+	width: 3px;
+	position: absolute;
+	top: 11px;
+	right: 8px;
+	background-color:#FFFFFF;
+	
+}
+.dropmenu li a:hover span{
+	background-color:#80141e;
+}
+.dropmenu li:hover ul, .dropmenu li:hover div{
+	display: block;
+}
+.dropmenu ul, .dropmenu div{
+	position: absolute;
+	display: none;
+	width: 200px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border-bottom: solid 1px #80141e;
+
+	
+}
+.dropmenu li div ul{
+	border: none;
+	background: none;
+	position: relative;
+	display: block;
+	left: 0px;
+	
+}
+.dropmenu ul li{
+	border: 0;
+	float: none;
+	
+}
+.dropmenu ul a {
+  border: 1px solid #80141e;
+  border-bottom: 0;
+  padding-right: 20px;
+  display:block;
+  color: #FFF;
+}
+.dropmenu ul a:hover {
+  text-decoration: none;
+  background-color:#80141e;
+}
+.dropmenu div ul{
+	position: relative;
+	display: block;
+}
+.dropmenu li div{
+	border: 1px solid #CCC;
+	background-color: #f1f1f1;
+	padding: 5px;
+	display: none;
+	position: absolute;
+}
+/*
+     FILE ARCHIVED ON 18:47:37 Sep 11, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:54:22 Aug 31, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.866
+  exclusion.robots: 0.041
+  exclusion.robots.policy: 0.025
+  esindex: 0.015
+  cdx.remote: 8.949
+  LoadShardBlock: 67.078 (3)
+  PetaboxLoader3.datanode: 172.169 (5)
+  load_resource: 1493.434 (2)
+  PetaboxLoader3.resolve: 1366.177 (2)
+*/
