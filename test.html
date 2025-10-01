@@ -585,11 +585,11 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
   <div class="grid-item-new">
   <img alt="Packabunchas" onerror="this.onerror=null;this.src='https://chicken.royalredeemerlutheranschool.org/whatver/wip.jpg';" src="https://chicken.royalredeemerlutheranschool.org/images/sonic2.jpg"/>
-  <a href="player.html?game=https://chicken.royalredeemerlutheranschool.org/assets/sonic2/">Sonic The Hedgehog 2</a>
+  <a href="https://chicken.royalredeemerlutheranschool.org/assets/sonic2/">Sonic The Hedgehog 2: Community's Cut</a>
 </div>
   <div class="grid-item-new">
   <img alt="Packabunchas" onerror="this.onerror=null;this.src='https://chicken.royalredeemerlutheranschool.org/whatver/wip.jpg';" src="https://chicken.royalredeemerlutheranschool.org/images/sonic3.jpg"/>
-  <a href="player.html?game=https://chicken.royalredeemerlutheranschool.org/assets/sonic3/sonic3air_web.html">Sonic The Hedgehog 3</a>
+  <a href="https://chicken.royalredeemerlutheranschool.org/assets/sonic3/sonic3air_web.html">Sonic The Hedgehog 3: Angel Island Revisited</a>
 </div>
   <div class="grid-item-new">
   <img alt="Packabunchas" onerror="this.onerror=null;this.src='https://chicken.royalredeemerlutheranschool.org/whatver/wip.jpg';" src="https://chicken.royalredeemerlutheranschool.org/images/spongebob-monster-island.jpg"/>
@@ -1473,51 +1473,6 @@ document.addEventListener('DOMContentLoaded', () => {
       font-weight: bold;
     }
   </style>
-<div class="settings-icon" onclick="toggleSettingsMenu()">
-    ⚙️
-  </div>
-<!-- Greeting -->
-<!-- Settings Menu (Initially Hidden, Toggleable) -->
-<div class="settings-menu" id="settings-menu">
-<div class="input-group">
-<label for="theme-select">Choose a Theme:</label>
-<select id="theme-select" onchange="applyTheme(this.value)">
-<option value="dark">Dark Mode</option>
-<option value="light">Light Mode</option>
-<option value="custom">Custom</option>
-</select>
-</div>
-<div class="input-group">
-<label for="bg-color">Background Color</label>
-<input id="bg-color" type="color"/>
-</div>
-<div class="input-group">
-<label for="text-color">Text Color</label>
-<input id="text-color" type="color"/>
-</div>
-<div class="input-group">
-<label for="bg-upload">Upload Background Image</label>
-<input accept="image/*" id="bg-upload" onchange="handleBackgroundImageUpload(event)" type="file"/>
-</div>
-<div class="input-group">
-<label for="bg-blur">Background Blur</label>
-<input id="bg-blur" max="20" min="0" step="1" type="range"/>
-</div>
-<div class="input-group">
-<label for="bg-brightness">Brightness</label>
-<input id="bg-brightness" max="150" min="50" step="1" type="range"/>
-</div>
-<div class="input-group">
-<label for="bg-contrast">Contrast</label>
-<input id="bg-contrast" max="200" min="50" step="1" type="range"/>
-</div>
-<div class="input-group">
-<label for="bg-grayscale">Grayscale</label>
-<input id="bg-grayscale" max="100" min="0" step="1" type="range"/>
-</div>
-<div class="input-group">
-<button id="reset-button">Reset</button>
-</div>
 </div>
 <script>
     // Function to update the greeting based on the time of day
