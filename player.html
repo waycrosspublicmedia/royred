@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 100% privacy-first analytics -->
+<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e !important;
+            margin: 0;
+            padding: 0;
+            cursor: url('ArrowCursor.png'), auto;
+        }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 1);
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 255, 0.5);
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 1.2em;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .grid-item-new {
+            background: #00ccff;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 62, 255, 0.27);
+            position: relative;
+            z-index: 1;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-8px); 
+            background: #0056b3;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid-item-new:hover {
+            transform: translateY(-8px); 
+            background: #00c8ff82;
+            box-shadow: 0 12px 24px rgba(0, 62, 255, 0.27);
+        }
+
+        .grid-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .grid-item-new a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .video-preview {
+            display: none;
+            position: absolute;
+            top: -180px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 180px;
+            background: black;
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 10; 
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .ranking-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            list-style: none;
+            text-align: center;
+        }
+
+        .ranking-item {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .ranking-item:hover {
+            transform: scale(1.1);
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .tooltip {
+            visibility: hidden;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            font-size: 0.9em;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .ranking-item:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .easter-egg {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background: rgba(0, 255, 127, 0.8);
+            border-radius: 10px;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            from { opacity: 0.7; }
+            to { opacity: 1; }
+        }
+
+        .grid-item:hover .video-preview {
+            display: block;
+            opacity: 1;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            transition: transform 0.3s, background-color 0.3s;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+
+        footer:hover {
+            transform: scale(1.05);
+            background-color: #0056b3;
+            color: white;
+        }
+
+        #searchBar {
+            padding: 10px;
+            width: 80%;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+    </style>
+</head>
+<body>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+        <div class="content">
+        </div>
+
+    <title>Desmos</title>
+    <style>
+      #iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        background: rgba(0, 0, 0, 0);
+        border-radius: 9px;
+        margin-bottom: 9px;
+    }
+
+    #myIframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+        #fullscreenBtn {
+           background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 200px;
+            font-size: 1.2em;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    </style>
+</head>
+<body>
+    <div id="iframe-container">
+        <iframe id="myIframe" src=""></iframe>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const game = params.get('game');
+
+    if (game) {
+        document.getElementById('myIframe').src = `${game}/index.html`;
+    } else {
+        document.getElementById('myIframe').src = 'fallback.html';
+    }
+</script>
+<p></p>
+</div>
+<div>
+        <button id="fullscreenBtn">Fullscreen</button>
+    </div>
+
+    <script>
+        
+    document.getElementById('fullscreenBtn').addEventListener('click', function () {
+        const container = document.getElementById('iframe-container');
+        if (container.requestFullscreen) {
+            container.requestFullscreen();
+        } else if (container.webkitRequestFullscreen) {
+            container.webkitRequestFullscreen();
+        } else if (container.msRequestFullscreen) {
+            container.msRequestFullscreen();
+        }
+    });
+    
+        });
+    </script>
+
+<style>
+    #exitFullscreenBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  background: red;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: none;
+    }
+.simulate-fullscreen {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  z-index: 99999 !important;
+  background: black;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+</style>
+
+<button id="exitFullscreenBtn">Exit Fullscreen</button>
+
+<script>
+    const iframe = document.getElementById('myIframe');
+    const container = document.getElementById('iframe-container');
+    const fsBtn = document.getElementById('fullscreenBtn');
+    const exitBtn = document.getElementById('exitFullscreenBtn');
+
+    let isSimulatedFullscreen = false;
+
+    fsBtn.addEventListener('click', () => {
+        container.classList.add('simulate-fullscreen');
+        exitBtn.style.display = 'block';
+        isSimulatedFullscreen = true;
+    });
+
+    exitBtn.addEventListener('click', () => {
+        container.classList.remove('simulate-fullscreen');
+        exitBtn.style.display = 'none';
+        isSimulatedFullscreen = false;
+    });
+
+    window.addEventListener('resize', () => {
+        if (!isSimulatedFullscreen) {
+            container.style.transition = 'all 0.5s ease';
+            container.style.width = window.innerWidth + 'px';
+            container.style.height = (window.innerWidth * 9 / 16) + 'px'; // 16:9 ratio
+        }
+    });
+
+    // Prevent ESC from exiting the simulated fullscreen
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isSimulatedFullscreen) {
+            e.preventDefault();
+        }
+    });
+</script>
+
+</body>
+</div>
+</html>
