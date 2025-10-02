@@ -100,6 +100,12 @@ p.green {
   border: 2px solid grey;
   background-color: #808080;
 }
+.favorite-icon.favorited {
+    color: red;
+}
+.favorite-icon.glow {
+    text-shadow: 0 0 10px red, 0 0 20px red;
+}
 
 p.orange {
   color: red;
@@ -648,12 +654,7 @@ document.addEventListener('DOMContentLoaded', () => {
        src="https://chicken.royalredeemerlutheranschool.org/images/clothing-shop-3d.jpg"/>
   <a href="player.html?game=https://chicken.royalredeemerlutheranschool.org/brainrot/clothing-shop-3d/">Clothing Shop 3D</a>
 </div>
-
-<div class="grid-item-new">
-  <img alt="Cool Cars Run 3D" onerror="this.onerror=null;this.src='https://chicken.royalredeemerlutheranschool.org/whatver/wip.jpg';"
-       src="https://chicken.royalredeemerlutheranschool.org/images/cool-cars-run-3d.jpg"/>
-  <a href="player.html?game=https://chicken.royalredeemerlutheranschool.org/brainrot/cool-cars-run-3d/">Cool Cars Run 3D</a>
-</div>
+  
 <div class="grid-item-new">
   <img alt="Cool Cars Run 3D" onerror="this.onerror=null;this.src='https://chicken.royalredeemerlutheranschool.org/whatver/wip.jpg';"
        src="https://chicken.royalredeemerlutheranschool.org/images/cool-cars-run-3d.jpg"/>
@@ -2125,6 +2126,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function toggleFavorite(icon, itemId) {
         icon.classList.toggle('favorited');
+        icon.classList.add('glow');
+        setTimeout(() => icon.classList.remove('glow'), 500);
         let favoriteItems = JSON.parse(localStorage.getItem('favorites')) || [];
         if (icon.classList.contains('favorited')) {
             if (!favoriteItems.includes(itemId)) favoriteItems.push(itemId);
@@ -2147,11 +2150,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Sort items alphabetically
     items.sort((a, b) => a.textContent.trim().toLowerCase().localeCompare(b.textContent.trim().toLowerCase()));
     items.forEach(item => container.appendChild(item));
 
-    // Add favorite icons
     const favoriteItems = JSON.parse(localStorage.getItem('favorites')) || [];
     items.forEach(item => {
         const itemId = item.querySelector('a').href;
@@ -2160,22 +2161,18 @@ document.addEventListener('DOMContentLoaded', () => {
         favoriteIcon.innerHTML = '❤️';
         favoriteIcon.onclick = () => toggleFavorite(favoriteIcon, itemId);
         item.appendChild(favoriteIcon);
-
         if (favoriteItems.includes(itemId)) {
             favoriteIcon.classList.add('favorited');
         }
     });
 
-    // Search bar event
     searchBar.addEventListener('input', searchMods);
 
-    // Game count display
     const count = items.length;
-    document.getElementById('gameCount').textContent =  `Games: ${count}`;
+    document.getElementById('gameCount').textContent = `Games: ${count.toLocaleString()}`;
 
     updateFavoritesSection();
 });
-
 </script>
 <footer>
 <p>2025 Marcco And Jalen </p>
