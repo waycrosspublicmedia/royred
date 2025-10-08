@@ -6538,6 +6538,11 @@
   // Expose for debugging if needed
   window.alphabetizeGames = alphabetizeGames;
 
+  document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        window.location.href = 'https://www.google.com';
+      }
+    });
 })();
 </script>
 
