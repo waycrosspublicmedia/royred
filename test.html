@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diesmos Games</title>
-  <meta name="description" content="Play hundreds of free games online at Diesmos Games - your ultimate gaming destination">
+  <meta name="description" content="hi">
   <meta name="keywords" content="games, online games, free games, flash games, html5 games">
   
   <!-- Favicon -->
@@ -102,6 +102,10 @@
     .nav-link:hover {
       color: var(--primary);
       background-color: rgba(0, 234, 255, 0.1);
+    }
+    .greeting {
+      font-size: 1.5em;
+      font-weight: bold;
     }
 
     .mobile-menu-btn {
@@ -532,6 +536,7 @@
 
   <main>
     <section class="hero">
+      <div class="greeting" id="greeting"></div>
       <h1>Discover Amazing Games</h1>
       <p>Play hundreds of free online games in one place. From action to puzzle, we have something for everyone!</p>
       
@@ -6437,6 +6442,15 @@
     });
   </script>
 <script>
+    // Function to update the greeting based on the time of day
+    function updateGreeting() {
+      const hour = new Date().getHours();
+      let greeting = 'Have a good day!';
+      if (hour < 12) greeting = 'Good morning!';
+      else if (hour < 18) greeting = 'Good afternoon!';
+      else greeting = 'Good evening!';
+      document.getElementById('greeting').textContent = greeting;
+    }
 
   // Get the text/title from a game card element
   function getGameTitleFromCard(card){
