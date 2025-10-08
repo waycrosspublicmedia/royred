@@ -6530,6 +6530,10 @@
     });
     docObserver.observe(document, { childList: true, subtree: true });
   }
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        window.location.href = 'https://www.google.com';
+      }
 
   // Run once after DOM ready, and again after window load
   document.addEventListener('DOMContentLoaded', function(){ setTimeout(triggerAlphabetize, 120); });
@@ -6537,12 +6541,7 @@
 
   // Expose for debugging if needed
   window.alphabetizeGames = alphabetizeGames;
-
-  document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        window.location.href = 'https://www.google.com';
-      }
-    });
+  
 })();
 </script>
 
