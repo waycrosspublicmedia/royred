@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="GF_assets.png" width="3502" height="3853">
+  <SubTexture name="GF_assets - GF Dancing Beat0002.png" x="0" y="0"  width="703" height="632" frameX="-0" frameY="-16" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0003.png" x="703" y="0"  width="699" height="632" frameX="-2" frameY="-16" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - gf sad0000.png" x="1402" y="0"  width="698" height="633" frameX="-0" frameY="-3" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0000.png" x="2100" y="0"  width="699" height="634" frameX="-2" frameY="-14" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0001.png" x="2799" y="0"  width="703" height="634" frameX="-0" frameY="-14" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0004.png" x="0" y="632"  width="698" height="635" frameX="-2" frameY="-13" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0005.png" x="698" y="632"  width="698" height="635" frameX="-2" frameY="-13" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0015.png" x="1396" y="633"  width="698" height="636" frameX="-2" frameY="-12" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0016.png" x="2094" y="634"  width="703" height="636" frameX="-0" frameY="-12" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0017.png" x="2797" y="634"  width="703" height="636" frameX="-0" frameY="-12" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0018.png" x="0" y="1267"  width="698" height="636" frameX="-2" frameY="-12" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - gf sad0004.png" x="698" y="1267"  width="698" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0006.png" x="1396" y="1269"  width="698" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0002.png" x="2094" y="1270"  width="699" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0008.png" x="2793" y="1270"  width="699" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0006.png" x="0" y="1903"  width="699" height="637" frameX="-2" frameY="-11" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0019.png" x="699" y="1905"  width="699" height="637" frameX="-2" frameY="-11" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0020.png" x="1398" y="1906"  width="698" height="637" frameX="-2" frameY="-11" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0021.png" x="2096" y="1906"  width="698" height="638" frameX="-2" frameY="-10" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0025.png" x="2794" y="1906"  width="698" height="642" frameX="-2" frameY="-6" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0028.png" x="0" y="2540"  width="699" height="642" frameX="-2" frameY="-6" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0022.png" x="699" y="2542"  width="699" height="643" frameX="-2" frameY="-5" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0007.png" x="1398" y="2543"  width="698" height="648" frameX="-2" frameY="-0" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0013.png" x="2096" y="2544"  width="698" height="648" frameX="-2" frameY="-0" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0010.png" x="2794" y="2548"  width="699" height="648" frameX="-2" frameY="-0" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Cheer0003.png" x="0" y="3182"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0004.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0002.png" x="1396" y="3192"  width="703" height="654" frameX="-0" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0000.png" x="2099" y="3196"  width="699" height="657" frameX="-2" frameY="-0" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0001.png" x="2798" y="3196"  width="703" height="657" frameX="-0" frameY="-0" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0005.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0006.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0007.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0008.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0009.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0010.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0011.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0012.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0013.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0014.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0015.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0016.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0017.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0018.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0019.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Cheer0020.png" x="698" y="3185"  width="698" height="654" frameX="-2" frameY="-3" frameWidth="703" frameHeight="657"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0008.png" x="1398" y="2543"  width="698" height="648" frameX="-2" frameY="-0" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0009.png" x="1398" y="2543"  width="698" height="648" frameX="-2" frameY="-0" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0011.png" x="2794" y="2548"  width="699" height="648" frameX="-2" frameY="-0" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0012.png" x="2794" y="2548"  width="699" height="648" frameX="-2" frameY="-0" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0014.png" x="2096" y="2544"  width="698" height="648" frameX="-2" frameY="-0" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0023.png" x="699" y="2542"  width="699" height="643" frameX="-2" frameY="-5" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0024.png" x="699" y="2542"  width="699" height="643" frameX="-2" frameY="-5" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0026.png" x="2794" y="1906"  width="698" height="642" frameX="-2" frameY="-6" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0027.png" x="2794" y="1906"  width="698" height="642" frameX="-2" frameY="-6" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - GF Dancing Beat0029.png" x="0" y="2540"  width="699" height="642" frameX="-2" frameY="-6" frameWidth="703" frameHeight="648"/>
+  <SubTexture name="GF_assets - gf sad0001.png" x="1402" y="0"  width="698" height="633" frameX="-0" frameY="-3" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0003.png" x="2094" y="1270"  width="699" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0010.png" x="2094" y="1270"  width="699" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0011.png" x="2094" y="1270"  width="699" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0005.png" x="698" y="1267"  width="698" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0012.png" x="698" y="1267"  width="698" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0013.png" x="698" y="1267"  width="698" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0007.png" x="1396" y="1269"  width="698" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0014.png" x="1396" y="1269"  width="698" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0015.png" x="1396" y="1269"  width="698" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0009.png" x="2793" y="1270"  width="699" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0016.png" x="2793" y="1270"  width="699" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+  <SubTexture name="GF_assets - gf sad0017.png" x="2793" y="1270"  width="699" height="636" frameX="-0" frameY="-0" frameWidth="699" frameHeight="636"/>
+</TextureAtlas>

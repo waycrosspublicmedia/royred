@@ -1,0 +1,17 @@
+{
+	"events": [
+		[
+			93.4812414308862,
+			[
+				["ZoomCamera", "256", "quartOut"]
+			]
+		],
+		[
+			12713.4488346005,
+			[
+				["ZoomCamera", "4", "INSTANT"]
+			]
+		]
+	],
+	"format": "psych_v1_convert"
+}

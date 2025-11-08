@@ -1,0 +1,26 @@
+{
+	"storyName": "",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"weekBefore": "",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Retry Now",
+			"M1KU",
+			[
+				0,
+				255,
+				255
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": ""
+}
