@@ -1,0 +1,2494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diesmos Games</title>
+
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script async data-id="101481770" src="//static.getclicky.com/js"></script>
+  <style>
+    :root {
+  --primary: #ff7518;
+  --primary-dark: #d85b00;
+  --secondary: #7f00ff;
+  --dark: #0b0b0b;
+  --darker: #050505;
+  --dark-light: #1a1a1a;
+  --gray: #4b4b4b;
+  --light-gray: #888;
+  --text: #f5e6c4;
+  --text-muted: #b39470;
+  --success: #66ff66;
+  --danger: #ff3333;
+  --border-radius: 12px;
+  --shadow: 0 4px 15px rgba(255, 120, 0, 0.3);
+  --transition: all 0.3s ease;
+}
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: var(--darker);
+      padding: 1rem 2rem;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+      background-color: rgba(0, 234, 255, 0.1);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 2rem 0 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Search Bar */
+    .search-container {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      position: relative;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      border: 2px solid var(--dark-light);
+      background-color: var(--dark-light);
+      color: var(--text);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .search-bar:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0, 234, 255, 0.2);
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .game-count {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background-color: var(--dark-light);
+      color: var(--text);
+      border: 2px solid transparent;
+      border-radius: var(--border-radius);
+      padding: 0.5rem 1.2rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover {
+      background-color: rgba(0, 234, 255, 0.1);
+      color: var(--primary);
+    }
+
+    .filter-btn.active {
+      background-color: var(--primary);
+      color: var(--dark);
+    }
+
+    /* Games Grid */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .game-card {
+      background-color: var(--dark-light);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .game-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .game-card.new::after {
+      content: "NEW";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--secondary);
+      color: var(--dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .game-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .game-info {
+      padding: 1rem;
+    }
+
+    .game-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+      text-decoration: none;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .game-title:hover {
+      color: var(--primary);
+    }
+
+    .game-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .favorite-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .favorite-btn:hover {
+      color: var(--danger);
+      transform: scale(1.2);
+    }
+
+    .favorite-btn.favorited {
+      color: var(--danger);
+    }
+
+    /* Favorites Section */
+    .favorites-section {
+      background-color: var(--darker);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--secondary);
+      text-align: center;
+    }
+
+    .favorites-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .empty-favorites {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+    }
+
+    /* Dev Notes */
+    .dev-notes {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .dev-note {
+      padding: 1rem 1.5rem;
+      border-radius: var(--border-radius);
+      position: relative;
+      padding-right: 70px;
+    }
+
+    .dev-note.marcco {
+      background-color: var(--gray);
+      border-left: 4px solid var(--primary);
+    }
+
+    .dev-note.jalen {
+      background-color: #8B0000;
+      border-left: 4px solid var(--danger);
+    }
+
+    .dev-note::after {
+      content: "";
+      background-size: 50px 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .dev-note.marcco::after {
+      background-image: url('https://chicken.royalredeemerlutheranschool.org/whatver/websiteicons/marcco.png');
+    }
+
+    .dev-note.jalen::after {
+      background-image: url('https://chicken.royalredeemerlutheranschool.org/whatver/websiteicons/jay.png');
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--darker);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-link:hover {
+      color: var(--primary);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-container {
+        padding: 0 1rem;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--darker);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .filter-buttons {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+      }
+
+      .favorites-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+      }
+
+      .dev-note {
+        padding-right: 60px;
+      }
+
+      .dev-note::after {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .favorites-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Loading Animation */
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(0, 234, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: var(--primary);
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon">🎮</span>
+        <a href="/test.html" class="logo-text">Diesmos Games</a>
+      </div>
+      
+      <nav>
+        <button class="mobile-menu-btn">☰</button>
+        <div class="nav-links">
+          <a href="/test.html" class="nav-link">Home</a>
+          <a href="/popular.html" class="nav-link">Popular</a>
+          <a href="/fnf.html" class="nav-link">FNF</a>
+          <a href="/arcade.html" class="nav-link">Arcade</a>
+          <a href="/addicting.html" class="nav-link">Addicting</a>
+          <a href="/puzzle.html" class="nav-link">Puzzle</a>
+          <a href="/story.html" class="nav-link">Story</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+    <h1>Play the Hottest Funkin’ Mods!</h1>
+    <p>Jam out with hundreds of free FNF mods — battle Pibby, face Sonic.exe, and find your next funky favorite right here!</p>
+      
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search for games..." id="searchBar">
+        <span class="search-icon">🔍</span>
+      </div>
+    </section>
+<div class="powr-hit-counter" id="03315e98_1747834633"></div><script src="https://www.powr.io/powr.js?platform=html"></script>
+    <section class="controls">
+      <div class="game-count" id="gameCount">Total Games: 0</div>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Games</button>
+        <button class="filter-btn" data-filter="new">New Games</button>
+        <button class="filter-btn" onclick="openSuggestions()">Suggestions</button>
+      </div>
+    </section>
+
+<section class="favorites-section">
+      <h2 class="section-title">Your Favorites</h2>
+      <div class="favorites-grid" id="favorites-container">
+        <div class="empty-favorites">
+          <p>You haven't added any favorites yet.</p>
+          <p>Click the ❤️ icon on games to add them here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="games-container">
+      <div class="games-grid" id="gamesGrid">
+        <!-- Games will be dynamically inserted here -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">© 2025 Diesmos Games. All rights reserved.</p>
+      <p class="footer-text">Made with ❤️ by the Diesmos Games team</p>
+    </div>
+  </footer>
+
+
+  <script>
+    // Sample game data - in a real implementation, this would come from your backend
+    const games = [
+  {
+    id: 36,
+    title: "FNF: CN Lost Episodes",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/cnlost.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/cnlost/",
+    isNew: false
+  },
+  {
+    id: 37,
+    title: "FNF: Sweet Licorice",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/licorice.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/licorice/",
+    isNew: false
+  },
+  {
+    id: 38,
+    title: "FNF: Porifera Atoll",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/porifera.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/porifera/",
+    isNew: false
+  },
+  {
+    id: 39,
+    title: "FNF: Tails Gets Trolled",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tailstroll.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/tailstroll/",
+    isNew: false
+  },
+  {
+    id: 40,
+    title: "FNF: ATROCITY 2025",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/atrocity.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/atrocity/",
+    isNew: false
+  },
+  {
+    id: 41,
+    title: "FNF: Chev (V-Slice One Shot)",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/chev.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/assets/chev/",
+    isNew: false
+  },
+  {
+    id: 167,
+    title: "FNF: Kick Kick Funk!",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/kick.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/kick/",
+    isNew: false
+  },
+  {
+    id: 321,
+    title: "FNF: Friday Night Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/0.6.0.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfweb/0.6.0/",
+    isNew: false
+  },
+  {
+    id: 322,
+    title: "FNF: Friday Night Funkin' Girlfriend Mode",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/gfmode.jpg",
+    url: "player.html?game=https://reading.yoylefake.org/gfmode/",
+    isNew: false
+  },
+  {
+    id: 323,
+    title: "FNF: Friday Night Funkin' Spooky Mix️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/spooky.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/spooky/",
+    isNew: false
+  },
+  {
+    id: 324,
+    title: "FNF: Friday Night Funkin' Child's Play Remake",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/child.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/child/",
+    isNew: false
+  },
+  {
+    id: 325,
+    title: "FNF: Friday Night Funkin' HD",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/fnfhd.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/fnfhd/",
+    isNew: false
+  },
+  {
+    id: 326,
+    title: "FNF: Friday Night Funkin' RTX On",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/rtx.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/rtx/",
+    isNew: false
+  },
+  {
+    id: 327,
+    title: "FNF: Friday Night Funkin' Funkadelix",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/funkadelix.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/funkadelix/",
+    isNew: false
+  },
+  {
+    id: 328,
+    title: "FNF: Friday Night Funkin' 3x3 Remixed",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/3x3.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/3x3/",
+    isNew: false
+  },
+  {
+    id: 329,
+    title: "FNF: Friday Night Funkin' B-Sides",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bsides.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/bsides/",
+    isNew: false
+  },
+  {
+    id: 330,
+    title: "FNF: Friday Night Funkin' From The Top!",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/ftt.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/ftt/",
+    isNew: false
+  },
+  {
+    id: 331,
+    title: "FNF: Get Digging - Fries vs. Needle",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/digging.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/digging/",
+    isNew: false
+  },
+  {
+    id: 332,
+    title: "FNF: Let There Be Light",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/ltbl.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/ltbl/",
+    isNew: false
+  },
+  {
+    id: 333,
+    title: "FNF: FNF x Steven Universe Mod - Gem Jam",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/gem.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/gem/",
+    isNew: false
+  },
+  {
+    id: 334,
+    title: "FNF: Mistful Crimson Morning Reboot",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mcm.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/mcm/",
+    isNew: false
+  },
+  {
+    id: 335,
+    title: "FNF: Untitled Femtanyl Mod",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/femtanyl.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/femtanyl/",
+    isNew: false
+  },
+  {
+    id: 336,
+    title: "FNF: SUPXR",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/supxr.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/supxr/",
+    isNew: false
+  },
+  {
+    id: 337,
+    title: "FNF: Vs. Momo: Ubume",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/ubume.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/ubume/",
+    isNew: false
+  },
+  {
+    id: 338,
+    title: "FNF: Spookyboo!",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/spookyboo.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/spookyboo/",
+    isNew: false
+  },
+  {
+    id: 339,
+    title: "FNF: Fancy Funking",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/fancy.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/fancy/",
+    isNew: false
+  },
+  {
+    id: 340,
+    title: "FNF: Tetonic - Vs. Teto",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tetonic.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/tetonic/",
+    isNew: false
+  },
+  {
+    id: 341,
+    title: "FNF: NONACCEPTANCE",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/nonacceptance.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/nonacceptance/",
+    isNew: false
+  },
+  {
+    id: 342,
+    title: "FNF: Darkwing Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/darkwing.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/darkwing/",
+    isNew: false
+  },
+  {
+    id: 343,
+    title: "FNF: Cool Pokemon Mod",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pokemon.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/pokemon/",
+    isNew: false
+  },
+  {
+    id: 344,
+    title: "FNF: AKAGE",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/akage.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/akage/",
+    isNew: false
+  },
+  {
+    id: 345,
+    title: "FNF: Tabi Revival",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tabi.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/tabi/",
+    isNew: false
+  },
+  {
+    id: 346,
+    title: "FNF: Creepypasta JP",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/yokai.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/yokai/",
+    isNew: false
+  },
+  {
+    id: 347,
+    title: "FNF: EVIL NOOB",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/noob.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/noob/",
+    isNew: false
+  },
+  {
+    id: 348,
+    title: "FNF: Blueballed V2",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/blueball.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/blueball/",
+    isNew: false
+  },
+  {
+    id: 349,
+    title: "FNF: Friday Night Dashin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/Dashin.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/Dashin/",
+    isNew: false
+  },
+  {
+    id: 350,
+    title: "FNF: Plants Vs Rappers",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/plants.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/plants/",
+    isNew: false
+  },
+  {
+    id: 351,
+    title: "FNF: Mokey",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mokey.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/mokey/",
+    isNew: false
+  },
+  {
+    id: 352,
+    title: "FNF: Pacman.exe",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/PACKILL.jpg",
+    url: "player.html?game=https://scientific.yoylefake.org/PACKILL/",
+    isNew: false
+  },
+  {
+    id: 353,
+    title: "FNF:Fake Jordans",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/fakejs.jpg",
+    url: "player.html?game=https://scientific.yoylefake.org/fakejs/",
+    isNew: false
+  },
+  {
+    id: 354,
+    title: "FNF: Friday Night Funkin' Lovewrec'd",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/lovewrecd.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/lovewrecd/",
+    isNew: false
+  },
+  {
+    id: 355,
+    title: "FNF: Friday Night Funkin' D-Sides",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/dsides.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/dsides",
+    isNew: false
+  },
+  {
+    id: 356,
+    title: "FNF: Friday Night Funkin' Neo",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/neo.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/neo/",
+    isNew: false
+  },
+  {
+    id: 357,
+    title: "FNF: Friday Night Funkin' Upside",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/upside.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/upside",
+    isNew: false
+  },
+  {
+    id: 358,
+    title: "FNF: Friday Night Funkin' Beatstreets",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/beat.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/beat/",
+    isNew: false
+  },
+  {
+    id: 359,
+    title: "FNF: Friday Night Funkin' But Bad",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/badfnf.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/badfnf/",
+    isNew: false
+  },
+  {
+    id: 360,
+    title: "FNF: Friday Night Funkin' Gooey Mix",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/gooey.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gooey/",
+    isNew: false
+  },
+  {
+    id: 361,
+    title: "FNF: Friday Night Funkin': Notice Me Senpai!",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/cloud.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/cloud/",
+    isNew: false
+  },
+  {
+    id: 362,
+    title: "FNF: Friday Night Funkin' Deep-Sea Date",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/seadate.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/seadate/",
+    isNew: false
+  },
+  {
+    id: 363,
+    title: "FNF: Friday Night Funkin' Hellbeats",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/hell.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/hell",
+    isNew: false
+  },
+  {
+    id: 364,
+    title: "FNF: Friday Night Funkin' Soft v1",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/soft.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/soft/",
+    isNew: false
+  },
+  {
+    id: 365,
+    title: "Friday Night Funkin' Starcatcher",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/starcatcher.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/starcatcher",
+    isNew: false
+  },
+  {
+    id: 366,
+    title: "Friday Night Funkin' Starlight Mayhem",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/strlight.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/strlight",
+    isNew: false
+  },
+  {
+    id: 367,
+    title: "FNF: Friday Night Funkin' FT. The Ex",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/ex.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/ex/",
+    isNew: false
+  },
+  {
+    id: 368,
+    title: "FNF: Friday Night Funkin' Cheater",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/cheater.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/cheater/",
+    isNew: false
+  },
+  {
+    id: 369,
+    title: "FNF: Friday Night Funkin' Hotline 024",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/hotline.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/hotline/",
+    isNew: false
+  },
+  {
+    id: 370,
+    title: "FNF: Friday Night Funkin' CG5 Edition",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/cg5.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/cg5/",
+    isNew: false
+  },
+  {
+    id: 371,
+    title: "FNF: Friday Night Funkin' Baddies",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/baddies.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/baddies/",
+    isNew: false
+  },
+  {
+    id: 372,
+    title: "FNF: Friday Night Funkin' Kero",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/Kero.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/Kero/",
+    isNew: false
+  },
+  {
+    id: 373,
+    title: "FNF: Friday Night Funkin': Cyber Sensation",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/cyber.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/cyber/",
+    isNew: false
+  },
+  {
+    id: 374,
+    title: "FNF: Friday Night Funkin' Dusttale",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/dust.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/dust/",
+    isNew: false
+  },
+  {
+    id: 375,
+    title: "FNF: Friday Night Funkin' Lullaby",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/lullaby.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/lullaby/",
+    isNew: false
+  },
+  {
+    id: 376,
+    title: "FNF: Friday Night Fever",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/fever.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/fever/",
+    isNew: false
+  },
+  {
+    id: 377,
+    title: "FNF: Friday Night Fever: Skelly Story",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/fevers.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fevers/",
+    isNew: false
+  },
+  {
+    id: 378,
+    title: "FNF: FNF Weekly: Tweakmas",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tweakmas.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/tweakmas/",
+    isNew: false
+  },
+  {
+    id: 379,
+    title: "FNF: Holo Night Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/holo.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/holo/",
+    isNew: false
+  },
+  {
+    id: 380,
+    title: "FNF: Viernes Night Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/viernes.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/viernes/",
+    isNew: false
+  },
+  {
+    id: 381,
+    title: "FNF: Another Friday Night",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/another.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/another/",
+    isNew: false
+  },
+  {
+    id: 382,
+    title: "FNF: Funkin' Aside",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/funkinaside.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/funkinaside/",
+    isNew: false
+  },
+  {
+    id: 383,
+    title: "FNF: Lite Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/lite.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/lite/",
+    isNew: false
+  },
+  {
+    id: 384,
+    title: "FNF: Arrow Funk",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/arrow.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/arrow/",
+    isNew: false
+  },
+  {
+    id: 385,
+    title: "FNF: VS. Whitty",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/whitty.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/whitty",
+    isNew: false
+  },
+  {
+    id: 386,
+    title: "FNF: VS. Whitty Erect",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/whittyerect.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whitty/",
+    isNew: false
+  },
+  {
+    id: 387,
+    title: "FNF: VS. Claire",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/claire.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/claire/",
+    isNew: false
+  },
+  {
+    id: 388,
+    title: "FNF: Pico Night Punkin",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/test.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/test/",
+    isNew: false
+  },
+  {
+    id: 389,
+    title: "FNF: VS. Neo Whitty",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/neowhitty.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/neowhitty/",
+    isNew: false
+  },
+  {
+    id: 390,
+    title: "FNF: VS. Agoti",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/agoti.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/agoti/",
+    isNew: false
+  },
+  {
+    id: 391,
+    title: "FNF: VS. QT: Rewired",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/qtrewired.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/qtrewired/",
+    isNew: false
+  },
+  {
+    id: 392,
+    title: "FNF: VS. Mami ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mami.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/mami/",
+    isNew: false
+  },
+  {
+    id: 393,
+    title: "FNF: VS. Virus R",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/virusr.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/virusr/",
+    isNew: false
+  },
+  {
+    id: 394,
+    title: "FNF: VS. Pico",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pico.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/pico/",
+    isNew: false
+  },
+  {
+    id: 395,
+    title: "FNF: VS. Carol",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mami.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/mami/",
+    isNew: false
+  },
+  {
+    id: 396,
+    title: "FNF: VS. Retrospecter️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/retro.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/retro/",
+    isNew: false
+  },
+  {
+    id: 397,
+    title: "FNF: VS. Darwi V2",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/darwi.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/darwi/",
+    isNew: false
+  },
+  {
+    id: 398,
+    title: "FNF: VS. Agoti Mic'd Up Engine",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/agotitest.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/agotitest/",
+    isNew: false
+  },
+  {
+    id: 399,
+    title: "FNF: VS.Peppino",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pizzatown.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/pizzatown/",
+    isNew: false
+  },
+  {
+    id: 400,
+    title: "FNF: VS.Maddness Erect",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/trickyerect.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/trickyerect/",
+    isNew: false
+  },
+  {
+    id: 401,
+    title: "FNF: Sunday Night Suicide V2",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/smouse.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/smouse/",
+    isNew: false
+  },
+  {
+    id: 402,
+    title: "FNF: VS.Black Betrayal",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/blackb.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/blackb/",
+    isNew: false
+  },
+  {
+    id: 403,
+    title: "FNF: VS.Cheeky v3",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/cheeky.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/cheeky/",
+    isNew: false
+  },
+  {
+    id: 404,
+    title: "FNF: VS.Trollge V2",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/physics.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/physics/",
+    isNew: false
+  },
+  {
+    id: 405,
+    title: "FNF: Doki Doki Bad Ending",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/badending.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/badending/",
+    isNew: false
+  },
+  {
+    id: 406,
+    title: "FNF: CN Takeover",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/cntakeover.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/cntakeover/",
+    isNew: false
+  },
+  {
+    id: 407,
+    title: "FNF: VS. Impostor",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/impo.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/impo",
+    isNew: false
+  },
+  {
+    id: 408,
+    title: "FNF: VS. Big Brother",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bigbro.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/bigbro",
+    isNew: false
+  },
+  {
+    id: 409,
+    title: "FNF: VS. Camellia",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/camellia.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/camellia",
+    isNew: false
+  },
+  {
+    id: 410,
+    title: "FNF: VS. Accelerant Hank, but all bullets",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/hankgoeshard.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/hankgoeshard/",
+    isNew: false
+  },
+  {
+    id: 411,
+    title: "FNF: VS. Annie",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/annie.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/annie/",
+    isNew: false
+  },
+  {
+    id: 412,
+    title: "FNF: VS. Hatsune Miku",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/miku.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/miku",
+    isNew: false
+  },
+  {
+    id: 413,
+    title: "FNF: VS. Chara",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/chara.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/chara",
+    isNew: false
+  },
+  {
+    id: 414,
+    title: "FNF: VS. K.K. Slider",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/vskk.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/vskk",
+    isNew: false
+  },
+  {
+    id: 415,
+    title: "FNF: VS. Super Idol",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/idol.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/idol",
+    isNew: false
+  },
+  {
+    id: 416,
+    title: "FNF: VS. FNAF 3 ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/FNAF.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/FNAF/",
+    isNew: false
+  },
+  {
+    id: 417,
+    title: "FNF: VS. Sky",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/sky.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/sky/",
+    isNew: false
+  },
+  {
+    id: 418,
+    title: "FNF: VS. 'FNF Kid'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/kid.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/kid/",
+    isNew: false
+  },
+  {
+    id: 419,
+    title: "FNF: VS. Lime Green Imposter (Imposter v5 April Fools Week)",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/lime.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/lime/",
+    isNew: false
+  },
+  {
+    id: 420,
+    title: "FNF: VS. Sonic.exe ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/sonic.exe.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/sonic.exe/",
+    isNew: false
+  },
+  {
+    id: 421,
+    title: "FNF: VS. Nero",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/nero.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/nero/",
+    isNew: false
+  },
+  {
+    id: 422,
+    title: "FNF: VS. Ron  ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/Ron.3.0.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/Ron.3.0/",
+    isNew: false
+  },
+  {
+    id: 423,
+    title: "FNF: VS. Rika",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/rika.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/rika/",
+    isNew: false
+  },
+  {
+    id: 424,
+    title: "FNF: VS. Speedrunner Mario",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/yas.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/yas/",
+    isNew: false
+  },
+  {
+    id: 425,
+    title: "FNF: VS. King",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/king.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/king/",
+    isNew: false
+  },
+  {
+    id: 426,
+    title: "FNF: VS. Hex",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/hex.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/hex/",
+    isNew: false
+  },
+  {
+    id: 427,
+    title: "FNF: VS. Slenderman",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/slenderman.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/slenderman/",
+    isNew: false
+  },
+  {
+    id: 428,
+    title: "FNF: VS. Sunday",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/sunday.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/sunday/",
+    isNew: false
+  },
+  {
+    id: 429,
+    title: "FNF: VS. Corrupted Tankman",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/cn.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/cn/",
+    isNew: false
+  },
+  {
+    id: 430,
+    title: "FNF: VS. Shaggy",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/shaggy.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/shaggy/",
+    isNew: false
+  },
+  {
+    id: 431,
+    title: "FNF: VS. Nonsense",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/nonsence.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/nonsence/",
+    isNew: false
+  },
+  {
+    id: 432,
+    title: "FNF: VS. Spong",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/spong.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/spong/",
+    isNew: false
+  },
+  {
+    id: 433,
+    title: "FNF: VS. Timmy",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pwrhr.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/pwrhr/",
+    isNew: false
+  },
+  {
+    id: 434,
+    title: "FNF: VS. Tord",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tord.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/tord/",
+    isNew: false
+  },
+  {
+    id: 435,
+    title: "FNF: VS. Tabi",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tabi.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/tabi/",
+    isNew: false
+  },
+  {
+    id: 436,
+    title: "FNF: VS. QT",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/qt.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/qt/",
+    isNew: false
+  },
+  {
+    id: 437,
+    title: "FNF: VS. Doxxie",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/doxxie.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/doxxie/",
+    isNew: false
+  },
+  {
+    id: 438,
+    title: "FNF: VS. Zardy",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/zardyupdate.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/zardyupdate/",
+    isNew: false
+  },
+  {
+    id: 439,
+    title: "FNF: CORROSION",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/corrosion.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/corrosion/",
+    isNew: false
+  },
+  {
+    id: 440,
+    title: "FNF: CORROSION V2",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/corrosion.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/corrosion/",
+    isNew: false
+  },
+  {
+    id: 441,
+    title: "FNF: Twiddlefinger",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/twiddlefinger.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/twiddlefinger/",
+    isNew: false
+  },
+  {
+    id: 442,
+    title: "FNF: ANOTHERBROTHER",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/anotherbrother.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/anotherbrother/",
+    isNew: false
+  },
+  {
+    id: 443,
+    title: "FNF: HORKGLORPGLOOP",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/hork.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/hork/",
+    isNew: false
+  },
+  {
+    id: 444,
+    title: "FNF: Konton Boogie ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/konton.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/konton/",
+    isNew: false
+  },
+  {
+    id: 445,
+    title: "FNF: Bob and Bosip: The EX Update",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bob.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/bob",
+    isNew: false
+  },
+  {
+    id: 446,
+    title: "FNF: Dave and Bambi Golden Apple ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/GoldenApple.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/GoldenApple/",
+    isNew: false
+  },
+  {
+    id: 447,
+    title: "FNF: Nyaw Erect",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/nyaw.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/nyaw/",
+    isNew: false
+  },
+  {
+    id: 448,
+    title: "FNF: VS. Tabi: Pico Mix",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tabip.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/tabip/",
+    isNew: false
+  },
+  {
+    id: 449,
+    title: "FNF: Silly Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/silly.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/silly/",
+    isNew: false
+  },
+  {
+    id: 450,
+    title: "FNF: Strident Crisis",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/strident.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/strident/",
+    isNew: false
+  },
+  {
+    id: 451,
+    title: "FNF: Spookys Saturday Scare",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/spookyscare.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/spookyscare/",
+    isNew: false
+  },
+  {
+    id: 452,
+    title: "FNF: Scratch Cat",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/scratch.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/scratch/",
+    isNew: false
+  },
+  {
+    id: 453,
+    title: "FNF: Aflac Remaster",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/aflac.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/aflac/",
+    isNew: false
+  },
+  {
+    id: 454,
+    title: "FNF: Mario's Madness V2 ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/MM.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/MM/",
+    isNew: false
+  },
+  {
+    id: 455,
+    title: "FNF: Voiid Chronicles ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/void.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/void/",
+    isNew: false
+  },
+  {
+    id: 456,
+    title: "FNF: Yeah! - Internet Oneshot",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/yeah.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/yeah/",
+    isNew: false
+  },
+  {
+    id: 457,
+    title: "FNF: Madness Incident: 0201A",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/madness.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/madness/",
+    isNew: false
+  },
+  {
+    id: 458,
+    title: "FNF: Nusky",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/nusky.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/nusky/",
+    isNew: false
+  },
+  {
+    id: 459,
+    title: "FNF: Grafitti Groovin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/grafitti.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/grafitti/",
+    isNew: false
+  },
+  {
+    id: 460,
+    title: "FNF: The Full-Ass Tricky Mod ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tricky.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/tricky",
+    isNew: false
+  },
+  {
+    id: 461,
+    title: "FNF: 17Bucks",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/17bucks.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/17bucks/",
+    isNew: false
+  },
+  {
+    id: 462,
+    title: "FNF: Indie Cross ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/indie.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/indie",
+    isNew: false
+  },
+  {
+    id: 463,
+    title: "FNF: 2Hot: Freestyle",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/2hot.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/2hot/",
+    isNew: false
+  },
+  {
+    id: 464,
+    title: "FNF: 2Hot: BF Mix",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/2hotbf.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/2hotbf/",
+    isNew: false
+  },
+  {
+    id: 465,
+    title: "FNF: Spongebob's Classic Showdown",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/spongebob.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/spongebob/",
+    isNew: false
+  },
+  {
+    id: 466,
+    title: "FNF: Next Out of Robloxia",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/roadblocks.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnf/roadblocks/",
+    isNew: false
+  },
+  {
+    id: 467,
+    title: "FNF: Hatsune Miku: Project Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/project.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/project/",
+    isNew: false
+  },
+  {
+    id: 468,
+    title: "FNF: Bopcity",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bop.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/bop/",
+    isNew: false
+  },
+  {
+    id: 469,
+    title: "FNF: Arcade Showdown",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/kapi.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/kapi/",
+    isNew: false
+  },
+  {
+    id: 470,
+    title: "FNF: Beats and Treats",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/beatstreats.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/beatstreats/",
+    isNew: false
+  },
+  {
+    id: 471,
+    title: "FNF: Pibby Corrupted ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pibby.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/pibby/",
+    isNew: false
+  },
+  {
+    id: 472,
+    title: "FNF: Jeffy's Endless Aethos",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/aethos.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/aethos/",
+    isNew: false
+  },
+  {
+    id: 473,
+    title: "FNF: Shucks v2",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/shucks.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/shucks/",
+    isNew: false
+  },
+  {
+    id: 474,
+    title: "FNF: Hazy River",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/hazy.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/hazy/",
+    isNew: false
+  },
+  {
+    id: 475,
+    title: "FNF: Twinsomnia",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/twin.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/twin/",
+    isNew: false
+  },
+  {
+    id: 476,
+    title: "FNF: Breaking Point",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/jaiden.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/jaiden/",
+    isNew: false
+  },
+  {
+    id: 477,
+    title: "FNF: Mid Fight Masses",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mfm.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/mfm/",
+    isNew: false
+  },
+  {
+    id: 478,
+    title: "FNF: Tales from the Treehouse",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tree.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/tree/",
+    isNew: false
+  },
+  {
+    id: 479,
+    title: "FNF: Sideline Blitz",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/sideline.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/sideline/",
+    isNew: false
+  },
+  {
+    id: 480,
+    title: "FNF: The Date Week",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/date.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/date/",
+    isNew: false
+  },
+  {
+    id: 481,
+    title: "FNF: Yeahman!",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/yeahman.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/yeahman/",
+    isNew: false
+  },
+  {
+    id: 482,
+    title: "FNF: Steven Universe Mini Mod Pack",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/steven.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/steven/",
+    isNew: false
+  },
+  {
+    id: 483,
+    title: "FNF: Roastin' on a Cartoon Cartoon Friday",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/roastin.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/roastin/",
+    isNew: false
+  },
+  {
+    id: 484,
+    title: "FNF: Beach Party",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/beach.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/beach/",
+    isNew: false
+  },
+  {
+    id: 485,
+    title: "FNF: Chaos Nightmare",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/phantasm.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/phantasm/",
+    isNew: false
+  },
+  {
+    id: 486,
+    title: "FNF: Sprunkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/sprunki.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/sprunki/",
+    isNew: false
+  },
+  {
+    id: 487,
+    title: "FNF: Funkin' for Hire",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/hire.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/hire/",
+    isNew: false
+  },
+  {
+    id: 488,
+    title: "FNF: Funkin' Peanuts",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/snoopy.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/snoopy/",
+    isNew: false
+  },
+  {
+    id: 489,
+    title: "FNF: Another Atrocity Fanmod",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/atrocity.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/atrocity/",
+    isNew: false
+  },
+  {
+    id: 490,
+    title: "FNF: Mistful Crimson Morning",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/MCM.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/MCM/",
+    isNew: false
+  },
+  {
+    id: 491,
+    title: "FNF: The X-Event",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/x-event.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/x-event/",
+    isNew: false
+  },
+  {
+    id: 492,
+    title: "FNF: Starving Artist",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/starve.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/starve/",
+    isNew: false
+  },
+  {
+    id: 493,
+    title: "FNF: Flavor Rave",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/flavor.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/flavor/",
+    isNew: false
+  },
+  {
+    id: 494,
+    title: "FNF: RoFNF Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/rofnf.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/rofnf/",
+    isNew: false
+  },
+  {
+    id: 495,
+    title: "FNF: Baldi's Basics in Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/baldi.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/baldi/",
+    isNew: false
+  },
+  {
+    id: 496,
+    title: "FNF: Deb8",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/deb8.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/deb8/",
+    isNew: false
+  },
+  {
+    id: 497,
+    title: "FNF: Killshot",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/killshot.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/killshot/",
+    isNew: false
+  },
+  {
+    id: 498,
+    title: "FNF: 13th Night Funk Blood️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/funkblood.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/funkblood/",
+    isNew: false
+  },
+  {
+    id: 499,
+    title: "FNF: Lobotomy Dash Funkin' ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/lobotomy.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/lobotomy/",
+    isNew: false
+  },
+  {
+    id: 500,
+    title: "FNF: Gamblecore",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/gamblecore.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/gamblecore/",
+    isNew: false
+  },
+  {
+    id: 501,
+    title: "FNF: Parkpass",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/parkpass.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/parkpass/",
+    isNew: false
+  },
+  {
+    id: 502,
+    title: "FNF: OK K.O.! Let's Get Funky!",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/K.O.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/K.O/",
+    isNew: false
+  },
+  {
+    id: 503,
+    title: "FNF: Hell Allany",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/alany.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/alany/",
+    isNew: false
+  },
+  {
+    id: 504,
+    title: "FNF: Darkness Takeover vs Pibby Family Guy",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/darkness-takeover.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/darkness-takeover/",
+    isNew: false
+  },
+  {
+    id: 505,
+    title: "FNF: SMW: Power Star Melody",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/smw.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/smw/",
+    isNew: false
+  },
+  {
+    id: 506,
+    title: "FNF: COME OUT TO PLAY - Vs. MC-X",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mc-x.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/mc-x/",
+    isNew: false
+  },
+  {
+    id: 507,
+    title: "FNF: FNF Vs Bad Piggies (Ross V2)",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bad-pig.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/bad-pig/",
+    isNew: false
+  },
+  {
+    id: 508,
+    title: "FNF: Funkin' In The Galaxy",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/in-the-gal.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/in-the-gal/",
+    isNew: false
+  },
+  {
+    id: 509,
+    title: "FNF: Funkin'Herobrine Reborn",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/herob.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/herob/",
+    isNew: false
+  },
+  {
+    id: 510,
+    title: "FNF: Pibby Legacy",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pibby-legacy.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/pibby-legacy/",
+    isNew: false
+  },
+  {
+    id: 511,
+    title: "FNF: Vs.Undertale",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/undertale.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/undertale/",
+    isNew: false
+  },
+  {
+    id: 512,
+    title: "FNF: BFDI 26",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bdfi26.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/bdfi26/",
+    isNew: false
+  },
+  {
+    id: 513,
+    title: "FNF: The Return Funkin' Whitty Demo",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/return.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/return/",
+    isNew: false
+  },
+  {
+    id: 514,
+    title: "FNF: Bob's Onslaught",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bob.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/bob/",
+    isNew: false
+  },
+  {
+    id: 515,
+    title: "FNF: SMB Funk Mix DX",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/funk-mix.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/funk-mix/",
+    isNew: false
+  },
+  {
+    id: 516,
+    title: "FNF: SMB Funk Mix DX Game Over",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/gameover.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gameover/",
+    isNew: false
+  },
+  {
+    id: 517,
+    title: "FNF: Salty's Sunday Night",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/salty.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/salty",
+    isNew: false
+  },
+  {
+    id: 518,
+    title: "FNF: Fuckin Funkin' with Koi",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/koi.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/koi/",
+    isNew: false
+  },
+  {
+    id: 519,
+    title: "FNF: Doki Doki Takeover Plus !",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/doki.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/doki/",
+    isNew: false
+  },
+  {
+    id: 520,
+    title: "FNF: MiFunkSide",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mifunkside.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/mifunkside/",
+    isNew: false
+  },
+  {
+    id: 521,
+    title: "FNF: Cartoon Clash",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/clash.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/clash",
+    isNew: false
+  },
+  {
+    id: 522,
+    title: "FNF: Silly Billy",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/billy.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/billy",
+    isNew: false
+  },
+  {
+    id: 523,
+    title: "FNF: Secret Histories",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/secretSonic.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/secretSonic",
+    isNew: false
+  },
+  {
+    id: 524,
+    title: "FNF: The Squidward Tricky Mod ️",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/squidtricky.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/squidtricky",
+    isNew: false
+  },
+  {
+    id: 525,
+    title: "FNF: The Impossible Trio",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/IT.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/IT/",
+    isNew: false
+  },
+  {
+    id: 526,
+    title: "FNF: Doubling Down",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/doubleingdown.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/doubleingdown/",
+    isNew: false
+  },
+  {
+    id: 527,
+    title: "FNF: MOB MOD",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mobmod.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/mobmod/",
+    isNew: false
+  },
+  {
+    id: 528,
+    title: "FNF: Digitalizing 2",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/digi.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/digi/",
+    isNew: false
+  },
+  {
+    id: 529,
+    title: "FNF: The Gacha Mod",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/gacha.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/gacha",
+    isNew: false
+  },
+  {
+    id: 530,
+    title: "FNF: Golf Minigame",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/golf.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/golf",
+    isNew: false
+  },
+  {
+    id: 531,
+    title: "FNF: Funkin' for a BFDI",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bfdi.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/bfdi/",
+    isNew: false
+  },
+  {
+    id: 532,
+    title: "FNF: Smoke Em' Out Struggle",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/garcello.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/garcello/",
+    isNew: false
+  },
+  {
+    id: 533,
+    title: "FNF: Wii Funkin' REV-MIX",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/REV-MIX.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/REV-MIX/",
+    isNew: false
+  },
+  {
+    id: 534,
+    title: "FNF: Wii Funkin' B-Sides",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mattbside.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/mattbside/",
+    isNew: false
+  },
+  {
+    id: 535,
+    title: "FNF: Wii Funkin' Wiik 3",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/matt3.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/matt3/",
+    isNew: false
+  },
+  {
+    id: 536,
+    title: "FNF: Krusty Karoling",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/krusty.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/krusty/",
+    isNew: false
+  },
+  {
+    id: 537,
+    title: "FNF: Funk! Miss Nagatoro",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/funknaga.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/funknaga/",
+    isNew: false
+  },
+  {
+    id: 538,
+    title: "FNF: Pibby Apocalypse",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pibby2.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/maths/pibby2",
+    isNew: false
+  },
+  {
+    id: 539,
+    title: "FNF: Corruption Invasion",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/invadion.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfmods/invadion/",
+    isNew: false
+  },
+ 
+      // Add more games as needed
+    ];
+
+  games.sort((a, b) => a.title.localeCompare(b.title));
+
+    // DOM Elements
+    const gamesGrid = document.getElementById('gamesGrid');
+    const favoritesContainer = document.getElementById('favoritesContainer');
+    const gameCount = document.getElementById('gameCount');
+    const searchBar = document.getElementById('searchBar');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    // State
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', () => {
+      renderGames();
+      updateGameCount();
+      setupEventListeners();
+    });
+
+    // Render games based on current filter and search
+    function renderGames() {
+      gamesGrid.innerHTML = '';
+      
+      const filteredGames = games.filter(game => {
+        const matchesFilter = currentFilter === 'all' || 
+                             (currentFilter === 'new' && game.isNew);
+        
+        const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
+        
+        return matchesFilter && matchesSearch;
+      });
+      
+      if (filteredGames.length === 0) {
+        gamesGrid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: var(--text-muted);">
+            <p>No games found matching your criteria.</p>
+          </div>
+        `;
+        return;
+      }
+      
+      filteredGames.forEach(game => {
+        const gameCard = document.createElement('div');
+        gameCard.className = `game-card ${game.isNew ? 'new' : ''}`;
+        gameCard.innerHTML = `
+          <img src="${game.image}" alt="${game.title}" class="game-image" onerror="this.src='https://chicken.royalredeemerlutheranschool.org/whatver/wip.jpg';">
+          <div class="game-info">
+            <a href="${game.url}" class="game-title">${game.title}</a>
+            <div class="game-actions">
+              <button class="favorite-btn ${favorites.includes(game.id) ? 'favorited' : ''}" data-id="${game.id}">
+                ${favorites.includes(game.id) ? '❤️' : '🤍'}
+              </button>
+            </div>
+          </div>
+        `;
+        gamesGrid.appendChild(gameCard);
+      });
+    }
+
+    // Update game count display
+    function updateGameCount() {
+      const totalGames = games.length;
+      const newGames = games.filter(game => game.isNew).length;
+      
+      if (currentFilter === 'all') {
+        gameCount.textContent = `Total Games: ${totalGames}`;
+      } else if (currentFilter === 'new') {
+        gameCount.textContent = `New Games: ${newGames}`;
+      }
+    }
+
+    // Setup event listeners
+    function setupEventListeners() {
+      // Filter buttons
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          currentFilter = button.dataset.filter;
+          renderGames();
+          updateGameCount();
+        });
+      });
+      
+      // Search functionality
+      searchBar.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderGames();
+      });
+      
+      // Mobile menu
+      mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+      
+      // Favorite buttons (delegated event listener)
+      document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('favorite-btn')) {
+          toggleFavorite(parseInt(e.target.dataset.id));
+        }
+      });
+    }
+
+    // Toggle favorite status
+    function toggleFavorite(gameId) {
+      const index = favorites.indexOf(gameId);
+      
+      if (index === -1) {
+        favorites.push(gameId);
+      } else {
+        favorites.splice(index, 1);
+      }
+      
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+      renderFavorites();
+      renderGames();
+      
+    }
+
+    // Render favorites section
+    function renderFavorites() {
+      const favoritesGrid = document.getElementById('favorites-container');
+      
+      if (favorites.length === 0) {
+        favoritesGrid.innerHTML = `
+          <div class="empty-favorites">
+            <p>You haven't added any favorites yet.</p>
+            <p>Click the ❤️ icon on games to add them here.</p>
+          </div>
+        `;
+        return;
+      }
+      
+      favoritesGrid.innerHTML = '';
+      
+      const favoriteGames = games.filter(game => favorites.includes(game.id));
+      
+      favoriteGames.forEach(game => {
+        const gameCard = document.createElement('div');
+        gameCard.className = `game-card ${game.isNew ? 'new' : ''}`;
+        gameCard.innerHTML = `
+          <img src="${game.image}" alt="${game.title}" class="game-image" onerror="this.src='https://chicken.royalredeemerlutheranschool.org/whatver/wip.jpg';">
+          <div class="game-info">
+            <a href="${game.url}" class="game-title">${game.title}</a>
+            <div class="game-actions">
+              <button class="favorite-btn favorited" data-id="${game.id}">❤️</button>
+            </div>
+          </div>
+        `;
+        favoritesGrid.appendChild(gameCard);
+      });
+    }
+
+    // Open suggestions form
+    function openSuggestions() {
+      window.open(
+        "https://docs.google.com/forms/d/e/1FAIpQLSfqTJRoaUQJ3YgpZALPIE85umsW12IBXtv6BaI9Y0fdB_XqzQ/viewform?fbzx=492301836448601508&pli=1",
+        "_blank"
+      );
+    }
+
+    // URL rewriting functionality (from original code)
+    document.addEventListener("DOMContentLoaded", function () {
+      const host = window.location.hostname;
+      
+      function rewriteURL(urlString) {
+        if (!urlString) return urlString;
+
+        let url = new URL(urlString, window.location.origin);
+
+        if (host.includes("diesmos")) {
+          url.href = url.href
+            .replace(/yoylefake/g, "diesmos")
+            .replace(/royalredeemerlutheranschool/g, "diesmos")
+            .replace(/\.org/g, ".com")
+            .replace(/^https?:\/\/chicken\./, "https://");
+        } else if (host.includes("royalredeemerlutheranschool")) {
+          url.href = url.href
+            .replace(/yoylefake/g, "royalredeemerlutheranschool")
+            .replace(/\.com/g, ".org");
+        }
+
+        return url.href;
+      }
+
+      function rewriteElement(el) {
+        if (el.hasAttribute("href")) {
+          el.href = rewriteURL(el.href);
+        }
+        if (el.hasAttribute("src")) {
+          el.src = rewriteURL(el.src);
+        }
+        if (el.style && el.style.backgroundImage) {
+          el.style.backgroundImage = el.style.backgroundImage.replace(
+            /url\(["']?(.*?)["']?\)/g,
+            (match, p1) => `url("${rewriteURL(p1)}")`
+          );
+        }
+      }
+
+      // Initial rewrite
+      document.querySelectorAll("a[href], img[src], script[src], iframe[src], link[href], video[src], audio[src], [style*='background-image']").forEach(rewriteElement);
+
+      // Observe DOM for dynamically added nodes
+      const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) {
+              rewriteElement(node);
+              node.querySelectorAll &&
+                node.querySelectorAll("a[href], img[src], script[src], iframe[src], link[href], video[src], audio[src], [style*='background-image']")
+                  .forEach(rewriteElement);
+            }
+          });
+        });
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+  </script>
+<script>
+
+  // Get the text/title from a game card element
+  function getGameTitleFromCard(card){
+    // prefer .game-title inside card, fallback to textContent of the card
+    const titleEl = card.querySelector('.game-title') || card.querySelector('a') || card;
+    const raw = (titleEl && (titleEl.textContent || titleEl.innerText) || '').toString().trim();
+    // optionally ignore leading articles:
+    return raw.replace(/^(the|an|a)\s+/i, '').toLowerCase();
+  }
+
+  // Main alphabetize function
+  function alphabetizeGames() {
+    const gamesGrid = document.getElementById('gamesGrid');
+    if (!gamesGrid) return;
+
+    // Collect children in a stable array
+    const allItems = Array.from(gamesGrid.children);
+    if (allItems.length === 0) return;
+
+    // Sort only the visible items so filtering remains respected
+    const visibleItems = allItems.filter(item => {
+      // consider element visible if not display:none and in layout
+      const style = window.getComputedStyle(item);
+      return style.display !== 'none' && item.offsetParent !== null;
+    });
+
+    if (visibleItems.length <= 1) return; // nothing to sort
+
+    visibleItems.sort((a, b) => {
+      const ta = getGameTitleFromCard(a);
+      const tb = getGameTitleFromCard(b);
+      return ta.localeCompare(tb, undefined, { numeric: true, sensitivity: 'base' });
+    });
+
+    // Append in sorted order (appending moves element in DOM but keeps its styles)
+    visibleItems.forEach(item => gamesGrid.appendChild(item));
+    console.debug('Alphabetized', visibleItems.length, 'games');
+  }
+
+  // Called after user actions or DOM changes, debounced
+  function triggerAlphabetize() {
+    debounce(alphabetizeGames, 60);
+  }
+
+  // Intercept clicks on category controls and anchors so we can alphabetize AFTER the change
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('.filter-btn, [data-filter], .nav-link, a[href^="#"]');
+    if (!btn) return;
+
+    // prevent simple anchor '#' jumps which cause navigation to top
+    if (btn.tagName === 'A' && btn.getAttribute('href') === '#') {
+      e.preventDefault();
+    }
+
+    // Let original handler run, then alphabetize (short delay)
+    setTimeout(triggerAlphabetize, 40);
+  }, {capture: true});
+
+  // Re-run when hash changes (some category systems rely on hash)
+  window.addEventListener('hashchange', triggerAlphabetize);
+  window.addEventListener('popstate', triggerAlphabetize);
+
+  // MutationObserver to catch dynamic updates to #gamesGrid (filtering, re-rendering, etc.)
+  const observerTarget = document.getElementById('gamesGrid');
+  if (observerTarget) {
+    const mo = new MutationObserver(mutations => {
+      // small debounce to avoid repeating work
+      triggerAlphabetize();
+    });
+    mo.observe(observerTarget, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+  } else {
+    // If gamesGrid isn't present yet, watch document and attach later
+    const docObserver = new MutationObserver((mutations, obs) => {
+      if (document.getElementById('gamesGrid')) {
+        // attach the real observer
+        const target = document.getElementById('gamesGrid');
+        const mo = new MutationObserver(() => triggerAlphabetize());
+        mo.observe(target, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+        obs.disconnect();
+      }
+    });
+    docObserver.observe(document, { childList: true, subtree: true });
+  }
+      document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        window.location.href = 'https://www.google.com';
+      }
+
+  // Run once after DOM ready, and again after window load
+  document.addEventListener('DOMContentLoaded', function(){ setTimeout(triggerAlphabetize, 120); });
+  window.addEventListener('load', function(){ setTimeout(triggerAlphabetize, 300); });
+
+  // Expose for debugging if needed
+  window.alphabetizeGames = alphabetizeGames;
+
+})();
+</script>
+
+</body>
+</html>

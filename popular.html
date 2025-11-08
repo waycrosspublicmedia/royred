@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diesmos Games</title>
+  <meta name="description" content="hi">
+  <meta name="keywords" content="hi">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script async data-id="101481770" src="//static.getclicky.com/js"></script>
+  <style>
+   :root {
+  --primary: #ff7518;
+  --primary-dark: #d85b00;
+  --secondary: #7f00ff;
+  --dark: #0b0b0b;
+  --darker: #050505;
+  --dark-light: #1a1a1a;
+  --gray: #4b4b4b;
+  --light-gray: #888;
+  --text: #f5e6c4;
+  --text-muted: #b39470;
+  --success: #66ff66;
+  --danger: #ff3333;
+  --border-radius: 12px;
+  --shadow: 0 4px 15px rgba(255, 120, 0, 0.3);
+  --transition: all 0.3s ease;
+}
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: var(--darker);
+      padding: 1rem 2rem;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+      background-color: rgba(0, 234, 255, 0.1);
+    }
+    .greeting {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 2rem 0 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Search Bar */
+    .search-container {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      position: relative;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      border: 2px solid var(--dark-light);
+      background-color: var(--dark-light);
+      color: var(--text);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .search-bar:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0, 234, 255, 0.2);
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .game-count {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background-color: var(--dark-light);
+      color: var(--text);
+      border: 2px solid transparent;
+      border-radius: var(--border-radius);
+      padding: 0.5rem 1.2rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover {
+      background-color: rgba(0, 234, 255, 0.1);
+      color: var(--primary);
+    }
+
+    .filter-btn.active {
+      background-color: var(--primary);
+      color: var(--dark);
+    }
+
+    /* Games Grid */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .game-card {
+      background-color: var(--dark-light);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .game-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .game-card.new::after {
+      content: "NEW";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--secondary);
+      color: var(--dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .game-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .game-info {
+      padding: 1rem;
+    }
+
+    .game-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+      text-decoration: none;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .game-title:hover {
+      color: var(--primary);
+    }
+
+    .game-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .favorite-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .favorite-btn:hover {
+      color: var(--danger);
+      transform: scale(1.2);
+    }
+
+    .favorite-btn.favorited {
+      color: var(--danger);
+    }
+
+    /* Favorites Section */
+    .favorites-section {
+      background-color: var(--darker);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--secondary);
+      text-align: center;
+    }
+
+    .favorites-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .empty-favorites {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+    }
+
+    /* Dev Notes */
+    .dev-notes {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .dev-note {
+      padding: 1rem 1.5rem;
+      border-radius: var(--border-radius);
+      position: relative;
+      padding-right: 70px;
+    }
+
+    .dev-note.marcco {
+      background-color: var(--gray);
+      border-left: 4px solid var(--primary);
+    }
+
+    .dev-note.jalen {
+      background-color: #8B0000;
+      border-left: 4px solid var(--danger);
+    }
+
+    .dev-note::after {
+      content: "";
+      background-size: 50px 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .dev-note.marcco::after {
+      background-image: url('https://chicken.royalredeemerlutheranschool.org/whatver/websiteicons/marcco.png');
+    }
+
+    .dev-note.jalen::after {
+      background-image: url('https://chicken.royalredeemerlutheranschool.org/whatver/websiteicons/jay.png');
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--darker);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-link:hover {
+      color: var(--primary);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-container {
+        padding: 0 1rem;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--darker);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .filter-buttons {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+      }
+
+      .favorites-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+      }
+
+      .dev-note {
+        padding-right: 60px;
+      }
+
+      .dev-note::after {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .favorites-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Loading Animation */
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(0, 234, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: var(--primary);
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon">🎮</span>
+        <a href="/test.html" class="logo-text">Diesmos Games</a>
+      </div>
+      
+      <nav>
+        <button class="mobile-menu-btn">☰</button>
+        <div class="nav-links">
+          <a href="/test.html" class="nav-link">Home</a>
+          <a href="/popular.html" class="nav-link">Popular</a>
+          <a href="/fnf.html" class="nav-link">FNF</a>
+          <a href="/arcade.html" class="nav-link">Arcade</a>
+          <a href="/addicting.html" class="nav-link">Addicting</a>
+          <a href="/puzzle.html" class="nav-link">Puzzle</a>
+          <a href="/story.html" class="nav-link">Story</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="greeting" id="greeting"></div>
+<h1>Discover Popular Games</h1>
+<p>Play our most popular games loved by many! From story-driven adventures like Undertale and Deltarune to endless runners like Subway Surfers and Jetpack Joyride — and even the chaotic comedy of Class of '09 or the fast-paced challenge of Slope — there’s something for everyone to enjoy.</p>
+      
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search for games..." id="searchBar">
+        <span class="search-icon">🔍</span>
+      </div>
+    </section>
+
+<div class="powr-hit-counter" id="03315e98_1747834633"></div><script src="https://www.powr.io/powr.js?platform=html"></script>
+    <section class="controls">
+      <div class="game-count" id="gameCount">Total Games: 0</div>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Games</button>
+        <button class="filter-btn" data-filter="new">New Games</button>
+        <button class="filter-btn" onclick="openSuggestions()">Suggestions</button>
+      </div>
+    </section>
+<section class="favorites-section">
+      <h2 class="section-title">Your Favorites</h2>
+      <div class="favorites-grid" id="favorites-container">
+        <div class="empty-favorites">
+          <p>You haven't added any favorites yet.</p>
+          <p>Click the ❤️ icon on games to add them here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="games-container">
+      <div class="games-grid" id="gamesGrid">
+        <!-- Games will be dynamically inserted here -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">© 2025 Diesmos Games. All rights reserved.</p>
+      <p class="footer-text">Made with ❤️ by the Diesmos Games team</p>
+    </div>
+  </footer>
+
+
+  <script>
+    // Sample game data - in a real implementation, this would come from your backend
+    const games = [
+  {
+    id: 4,
+    title: "Bad Ice Cream",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bad-ice-cream.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/bad-ice-cream/",
+    isNew: false
+  },
+  {
+    id: 34,
+    title: "Bendy and the Ink Machine",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bendy.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/vendors/bendy/",
+    isNew: false
+  },
+  {
+    id: 35,
+    title: "Yandere Simulator",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/yandere-simulator.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/assets/yandere-simulator/",
+    isNew: false
+  },
+  {
+    id: 86,
+    title: "Bad Monday Simulator",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bad-monday-simulator.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/assets/bad-monday-simulator/",
+    isNew: false
+  },
+  {
+    id: 87,
+    title: "Human Expenditure Program (BLOODMONEY! 2)",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/human-expenditure-program.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/assets/human-expenditure-program/",
+    isNew: false
+  },
+  {
+    id: 127,
+    title: "Class of '09: The Re-Up",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/re-up.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gamepath/re-up/",
+    isNew: true
+  },
+  {
+    id: 134,
+    title: "Sonic The Hedgehog 2: Community's Cut",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/sonic2.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/assets/sonic2/",
+    isNew: false
+  },
+  {
+    id: 145,
+    title: "UNDERWHEELS",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/underwheels.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/underwheels/",
+    isNew: false
+  },
+  {
+    id: 175,
+    title: "Swordfight",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/swordfight.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/swordfight/",
+    isNew: false
+  },
+  {
+    id: 178,
+    title: "Class of '09",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/class09.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/class-of-09/",
+    isNew: false
+  },
+  {
+    id: 179,
+    title: "Ultrakill",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/ultrakill.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/ultrakill/",
+    isNew: false
+  },
+  {
+    id: 180,
+    title: "BLOODMONEY!",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bmoney.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/bmoney/",
+    isNew: false
+  },
+  {
+    id: 183,
+    title: "Chiikawa Puzzle",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/chiipuz.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/chiipuz/",
+    isNew: false
+  },
+  {
+    id: 192,
+    title: "Temple Run 2",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/temple-run-2.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/temple-run-2/",
+    isNew: false
+  },
+  {
+    id: 195,
+    title: "People Playground",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/peopleplayground.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gamepath/people-playground/",
+    isNew: false
+  },
+  {
+    id: 196,
+    title: "Yume Nikki",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/yumenikki.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gamepath/yume-nikki/",
+    isNew: false
+  },
+  {
+    id: 199,
+    title: "Doki Doki Literature Club",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/ddlc.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gamepath/dokidoki/",
+    isNew: false
+  },
+  {
+    id: 200,
+    title: "Undertale",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/undertalereal.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gamepath/undertale/",
+    isNew: false
+  },
+  {
+    id: 201,
+    title: "Deltarune",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/deltarune.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gamepath/deltarune/",
+    isNew: false
+  },
+  {
+    id: 204,
+    title: "Lacey's Flash Games",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/lacey.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gamepath/lacysflashgames/",
+    isNew: false
+  },
+  {
+    id: 205,
+    title: "Do NOT Take This Cat Home",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/dontcat.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/gamepath/donottakethiscathome/",
+    isNew: false
+  },
+  {
+    id: 214,
+    title: "Snake",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/google-snake.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/google-snake/",
+    isNew: false
+  },
+  {
+    id: 219,
+    title: "Bloons Tower Defense",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bloonstd.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/bloonstd/",
+    isNew: false
+  },
+  {
+    id: 243,
+    title: "Hobo",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/hobo.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/hobo/",
+    isNew: false
+  },
+  {
+    id: 264,
+    title: "Soundboard",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/soundboard.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/soundboard/",
+    isNew: false
+  },
+  {
+    id: 303,
+    title: "Jetpack Joyride",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/jetpack.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/jetpack/",
+    isNew: false
+  },
+  {
+    id: 309,
+    title: "Watermelon Game",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/watermelongame.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/watermelongame/",
+    isNew: false
+  },
+  {
+    id: 321,
+    title: "FNF: Friday Night Funkin'",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/0.6.0.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/fnfweb/0.6.0/",
+    isNew: false
+  },
+  {
+    id: 541,
+    title: "Tunnel Rush",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tunnelrush.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/tunnelrush/",
+    isNew: false
+  },
+  {
+    id: 548,
+    title: "Celeste",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/celeste.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/celeste/",
+    isNew: false
+  },
+  {
+    id: 582,
+    title: "Amazing Rope Police",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/amazing-rope-police.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/amazing-rope-police/",
+    isNew: false
+  },
+  {
+    id: 584,
+    title: "Angry Birds",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/birds.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/birds/",
+    isNew: false
+  },
+  {
+    id: 589,
+    title: "Backflip Dive 3d",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/backflip-dive-3d.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/backflip-dive-3d/",
+    isNew: false
+  },
+  {
+    id: 590,
+    title: "Bad Time Simulator",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/badtimesimulator.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/badtimesimulator/",
+    isNew: false
+  },
+  {
+    id: 591,
+    title: "Baldi's Basics",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/baldis-basics.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/baldis-basics/",
+    isNew: false
+  },
+  {
+    id: 594,
+    title: "Basketball Stars",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/basketball-stars.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/basketball-stars/",
+    isNew: false
+  },
+  {
+    id: 595,
+    title: "BFDIA 5b",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bfdia.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/bfdia/",
+    isNew: false
+  },
+  {
+    id: 596,
+    title: "Binding Of Isaac",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/binding-of-isaac.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/binding-of-isaac/",
+    isNew: false
+  },
+  {
+    id: 598,
+    title: "Bitlife",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/bitlife.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/bitlife/",
+    isNew: false
+  },
+  {
+    id: 599,
+    title: "Block Blast",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/block.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/block/",
+    isNew: false
+  },
+  {
+    id: 616,
+    title: "Cluster Rush",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/cluster-rush.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/cluster-rush/",
+    isNew: false
+  },
+  {
+    id: 617,
+    title: "Color Switch",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/colorswitch.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/colorswitch/",
+    isNew: false
+  },
+  {
+    id: 619,
+    title: "Cookie Clicker Classic",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/Cookie-Clicker-Classic-main.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/livediesmos/Cookie-Clicker-Classic-main/",
+    isNew: false
+  },
+  {
+    id: 621,
+    title: "Crazy Cars",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/CrazyCars.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/CrazyCars/",
+    isNew: false
+  },
+  {
+    id: 623,
+    title: "Crossy Road",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/crossy.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/crossy/",
+    isNew: false
+  },
+  {
+    id: 625,
+    title: "Cut The Rope",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/rope.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/rope/",
+    isNew: false
+  },
+  {
+    id: 629,
+    title: "Doge Miner",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/DogeMiner.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/DogeMiner/",
+    isNew: false
+  },
+  {
+    id: 630,
+    title: "Doodle Jump",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/doodlejump.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/doodlejump/",
+    isNew: false
+  },
+  {
+    id: 635,
+    title: "Duck Life",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/ducklife.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/ducklife/",
+    isNew: false
+  },
+  {
+    id: 646,
+    title: "Fancy Pants Adventures",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/fancypantsadventures.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/fancypantsadventures/",
+    isNew: false
+  },
+  {
+    id: 653,
+    title: "Flappy Bird",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/flappybird.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/flappybird/",
+    isNew: false
+  },
+  {
+    id: 659,
+    title: "FNAF",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/fnaf.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/fnaf/",
+    isNew: false
+  },
+  {
+    id: 663,
+    title: "Fruit Ninja",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/ninja.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/ninja/",
+    isNew: false
+  },
+  {
+    id: 675,
+    title: "Happy Wheels",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/happywheels.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/happywheels/",
+    isNew: false
+  },
+  {
+    id: 679,
+    title: "Idle Breakout",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/idle-breakout.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/idle-breakout/",
+    isNew: false
+  },
+  {
+    id: 681,
+    title: "Infinite Craft",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/infinitecraft.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/whatver/infinitecraft/",
+    isNew: false
+  },
+  {
+    id: 692,
+    title: "Mario and Luigi: Superstar Saga",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/player#superstar.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/gba/player#superstar",
+    isNew: false
+  },
+  {
+    id: 700,
+    title: "Minecraft 1.11.2",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/mine.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/mine/",
+    isNew: false
+  },
+  {
+    id: 708,
+    title: "myTeardrop",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/play.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/teardrop/play/",
+    isNew: false
+  },
+  {
+    id: 711,
+    title: "OMORI",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/omori.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/omori/",
+    isNew: false
+  },
+  {
+    id: 722,
+    title: "Pizza Tower",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pizza-tower.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/pizza-tower/",
+    isNew: false
+  },
+  {
+    id: 723,
+    title: "Plants vs Zombies",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pvz.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/pvz/",
+    isNew: false
+  },
+  {
+    id: 724,
+    title: "Pokemon: FireRed",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pokemonred.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/gba/player#pokemonred",
+    isNew: false
+  },
+  {
+    id: 725,
+    title: "Pokemon: LeafGreen",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/pokemongreen.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/gba/player#pokemongreen",
+    isNew: false
+  },
+  {
+    id: 730,
+    title: "Retro Bowl",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/retro-bowl.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/retro-bowl/",
+    isNew: false
+  },
+  {
+    id: 743,
+    title: "Slope",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/slope.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/slope/",
+    isNew: false
+  },
+  {
+    id: 745,
+    title: "Smash Karts",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/smashk.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/smashk/",
+    isNew: false
+  },
+  {
+    id: 746,
+    title: "Snow Rider 3D",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/rider.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/rider/",
+    isNew: false
+  },
+  {
+    id: 747,
+    title: "Sonic Advance",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/sonic_advance.jpg",
+    url: "https://chicken.royalredeemerlutheranschool.org/gba/player#sonic_advance",
+    isNew: false
+  },
+  {
+    id: 760,
+    title: "Subway Surfers",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/subway.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/subway/",
+    isNew: false
+  },
+  {
+    id: 774,
+    title: "Tetris",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/tetris.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/tetris/",
+    isNew: false
+  },
+  {
+    id: 775,
+    title: "The Backrooms",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/backrooms.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/backrooms/",
+    isNew: false
+  },
+  {
+    id: 779,
+    title: "The Impossible Quiz",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/the-impossible-quiz.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/the-impossible-quiz/",
+    isNew: false
+  },
+  {
+    id: 789,
+    title: "Vex",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/vex.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/vex/",
+    isNew: false
+  },
+  {
+    id: 797,
+    title: "Worlds Hardest Game",
+    image: "https://chicken.royalredeemerlutheranschool.org/images/worlds-hardest-game.jpg",
+    url: "player.html?game=https://chicken.royalredeemerlutheranschool.org/livediesmos/worlds-hardest-game/",
+    isNew: false
+  },
+      // Add more games as needed
+    ];
+
+  games.sort((a, b) => a.title.localeCompare(b.title));
+
+    // DOM Elements
+    const gamesGrid = document.getElementById('gamesGrid');
+    const favoritesContainer = document.getElementById('favoritesContainer');
+    const gameCount = document.getElementById('gameCount');
+    const searchBar = document.getElementById('searchBar');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    // State
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', () => {
+      renderGames();
+      updateGameCount();
+      setupEventListeners();
+    });
+
+    // Render games based on current filter and search
+    function renderGames() {
+      gamesGrid.innerHTML = '';
+      
+      const filteredGames = games.filter(game => {
+        const matchesFilter = currentFilter === 'all' || 
+                             (currentFilter === 'new' && game.isNew);
+        
+        const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
+        
+        return matchesFilter && matchesSearch;
+      });
+      
+      if (filteredGames.length === 0) {
+        gamesGrid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: var(--text-muted);">
+            <p>No games found matching your criteria.</p>
+          </div>
+        `;
+        return;
+      }
+      
+      filteredGames.forEach(game => {
+        const gameCard = document.createElement('div');
+        gameCard.className = `game-card ${game.isNew ? 'new' : ''}`;
+        gameCard.innerHTML = `
+          <img src="${game.image}" alt="${game.title}" class="game-image" onerror="this.src='https://chicken.royalredeemerlutheranschool.org/whatver/wip.jpg';">
+          <div class="game-info">
+            <a href="${game.url}" class="game-title">${game.title}</a>
+            <div class="game-actions">
+              <button class="favorite-btn ${favorites.includes(game.id) ? 'favorited' : ''}" data-id="${game.id}">
+                ${favorites.includes(game.id) ? '❤️' : '🤍'}
+              </button>
+            </div>
+          </div>
+        `;
+        gamesGrid.appendChild(gameCard);
+      });
+    }
+
+    // Update game count display
+    function updateGameCount() {
+      const totalGames = games.length;
+      const newGames = games.filter(game => game.isNew).length;
+      
+      if (currentFilter === 'all') {
+        gameCount.textContent = `Total Games: ${totalGames}`;
+      } else if (currentFilter === 'new') {
+        gameCount.textContent = `New Games: ${newGames}`;
+      }
+    }
+
+    // Setup event listeners
+    function setupEventListeners() {
+      // Filter buttons
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          currentFilter = button.dataset.filter;
+          renderGames();
+          updateGameCount();
+        });
+      });
+      
+      // Search functionality
+      searchBar.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderGames();
+      });
+      
+      // Mobile menu
+      mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+      
+      // Favorite buttons (delegated event listener)
+      document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('favorite-btn')) {
+          toggleFavorite(parseInt(e.target.dataset.id));
+        }
+      });
+    }
+
+    // Toggle favorite status
+    function toggleFavorite(gameId) {
+      const index = favorites.indexOf(gameId);
+      
+      if (index === -1) {
+        favorites.push(gameId);
+      } else {
+        favorites.splice(index, 1);
+      }
+      
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+      renderFavorites();
+      renderGames();
+      
+    }
+
+    // Render favorites section
+    function renderFavorites() {
+      const favoritesGrid = document.getElementById('favorites-container');
+      
+      if (favorites.length === 0) {
+        favoritesGrid.innerHTML = `
+          <div class="empty-favorites">
+            <p>You haven't added any favorites yet.</p>
+            <p>Click the ❤️ icon on games to add them here.</p>
+          </div>
+        `;
+        return;
+      }
+      
+      favoritesGrid.innerHTML = '';
+      
+      const favoriteGames = games.filter(game => favorites.includes(game.id));
+      
+      favoriteGames.forEach(game => {
+        const gameCard = document.createElement('div');
+        gameCard.className = `game-card ${game.isNew ? 'new' : ''}`;
+        gameCard.innerHTML = `
+          <img src="${game.image}" alt="${game.title}" class="game-image" onerror="this.src='https://chicken.royalredeemerlutheranschool.org/whatver/wip.jpg';">
+          <div class="game-info">
+            <a href="${game.url}" class="game-title">${game.title}</a>
+            <div class="game-actions">
+              <button class="favorite-btn favorited" data-id="${game.id}">❤️</button>
+            </div>
+          </div>
+        `;
+        favoritesGrid.appendChild(gameCard);
+      });
+    }
+
+    // Open suggestions form
+    function openSuggestions() {
+      window.open(
+        "https://docs.google.com/forms/d/e/1FAIpQLSfqTJRoaUQJ3YgpZALPIE85umsW12IBXtv6BaI9Y0fdB_XqzQ/viewform?fbzx=492301836448601508&pli=1",
+        "_blank"
+      );
+    }
+
+    // URL rewriting functionality (from original code)
+    document.addEventListener("DOMContentLoaded", function () {
+      const host = window.location.hostname;
+      
+      function rewriteURL(urlString) {
+        if (!urlString) return urlString;
+
+        let url = new URL(urlString, window.location.origin);
+
+        if (host.includes("diesmos")) {
+          url.href = url.href
+            .replace(/yoylefake/g, "diesmos")
+            .replace(/royalredeemerlutheranschool/g, "diesmos")
+            .replace(/\.org/g, ".com")
+            .replace(/^https?:\/\/chicken\./, "https://");
+        } else if (host.includes("royalredeemerlutheranschool")) {
+          url.href = url.href
+            .replace(/yoylefake/g, "royalredeemerlutheranschool")
+            .replace(/\.com/g, ".org");
+        }
+
+        return url.href;
+      }
+
+      function rewriteElement(el) {
+        if (el.hasAttribute("href")) {
+          el.href = rewriteURL(el.href);
+        }
+        if (el.hasAttribute("src")) {
+          el.src = rewriteURL(el.src);
+        }
+        if (el.style && el.style.backgroundImage) {
+          el.style.backgroundImage = el.style.backgroundImage.replace(
+            /url\(["']?(.*?)["']?\)/g,
+            (match, p1) => `url("${rewriteURL(p1)}")`
+          );
+        }
+      }
+
+      // Initial rewrite
+      document.querySelectorAll("a[href], img[src], script[src], iframe[src], link[href], video[src], audio[src], [style*='background-image']").forEach(rewriteElement);
+
+      // Observe DOM for dynamically added nodes
+      const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) {
+              rewriteElement(node);
+              node.querySelectorAll &&
+                node.querySelectorAll("a[href], img[src], script[src], iframe[src], link[href], video[src], audio[src], [style*='background-image']")
+                  .forEach(rewriteElement);
+            }
+          });
+        });
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+  </script>
+<script>
+    // Function to update the greeting based on the time of day
+    function updateGreeting() {
+      const hour = new Date().getHours();
+      let greeting = 'Have a good day!';
+      if (hour < 12) greeting = 'Good morning!';
+      else if (hour < 18) greeting = 'Good afternoon!';
+      else greeting = 'Good evening!';
+      document.getElementById('greeting').textContent = greeting;
+    }
+
+  // Get the text/title from a game card element
+  function getGameTitleFromCard(card){
+    // prefer .game-title inside card, fallback to textContent of the card
+    const titleEl = card.querySelector('.game-title') || card.querySelector('a') || card;
+    const raw = (titleEl && (titleEl.textContent || titleEl.innerText) || '').toString().trim();
+    // optionally ignore leading articles:
+    return raw.replace(/^(the|an|a)\s+/i, '').toLowerCase();
+  }
+
+  // Main alphabetize function
+  function alphabetizeGames() {
+    const gamesGrid = document.getElementById('gamesGrid');
+    if (!gamesGrid) return;
+
+    // Collect children in a stable array
+    const allItems = Array.from(gamesGrid.children);
+    if (allItems.length === 0) return;
+
+    // Sort only the visible items so filtering remains respected
+    const visibleItems = allItems.filter(item => {
+      // consider element visible if not display:none and in layout
+      const style = window.getComputedStyle(item);
+      return style.display !== 'none' && item.offsetParent !== null;
+    });
+
+    if (visibleItems.length <= 1) return; // nothing to sort
+
+    visibleItems.sort((a, b) => {
+      const ta = getGameTitleFromCard(a);
+      const tb = getGameTitleFromCard(b);
+      return ta.localeCompare(tb, undefined, { numeric: true, sensitivity: 'base' });
+    });
+
+    // Append in sorted order (appending moves element in DOM but keeps its styles)
+    visibleItems.forEach(item => gamesGrid.appendChild(item));
+    console.debug('Alphabetized', visibleItems.length, 'games');
+  }
+
+  // Called after user actions or DOM changes, debounced
+  function triggerAlphabetize() {
+    debounce(alphabetizeGames, 60);
+  }
+
+  // Intercept clicks on category controls and anchors so we can alphabetize AFTER the change
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('.filter-btn, [data-filter], .nav-link, a[href^="#"]');
+    if (!btn) return;
+
+    // prevent simple anchor '#' jumps which cause navigation to top
+    if (btn.tagName === 'A' && btn.getAttribute('href') === '#') {
+      e.preventDefault();
+    }
+
+    // Let original handler run, then alphabetize (short delay)
+    setTimeout(triggerAlphabetize, 40);
+  }, {capture: true});
+
+  // Re-run when hash changes (some category systems rely on hash)
+  window.addEventListener('hashchange', triggerAlphabetize);
+  window.addEventListener('popstate', triggerAlphabetize);
+
+  // MutationObserver to catch dynamic updates to #gamesGrid (filtering, re-rendering, etc.)
+  const observerTarget = document.getElementById('gamesGrid');
+  if (observerTarget) {
+    const mo = new MutationObserver(mutations => {
+      // small debounce to avoid repeating work
+      triggerAlphabetize();
+    });
+    mo.observe(observerTarget, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+  } else {
+    // If gamesGrid isn't present yet, watch document and attach later
+    const docObserver = new MutationObserver((mutations, obs) => {
+      if (document.getElementById('gamesGrid')) {
+        // attach the real observer
+        const target = document.getElementById('gamesGrid');
+        const mo = new MutationObserver(() => triggerAlphabetize());
+        mo.observe(target, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+        obs.disconnect();
+      }
+    });
+    docObserver.observe(document, { childList: true, subtree: true });
+  }
+      document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        window.location.href = 'https://www.google.com';
+      }
+
+  // Run once after DOM ready, and again after window load
+  document.addEventListener('DOMContentLoaded', function(){ setTimeout(triggerAlphabetize, 120); });
+  window.addEventListener('load', function(){ setTimeout(triggerAlphabetize, 300); });
+
+  // Expose for debugging if needed
+  window.alphabetizeGames = alphabetizeGames;
+
+})();
+</script>
+
+</body>
+</html>
