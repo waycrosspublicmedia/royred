@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [0, -9],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+			"name": "gf idle"
+		},
+		{
+			"offsets": [0, -9],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+			"name": "gf idle"
+		},
+		{
+			"offsets": [0, -9],
+			"loop": false,
+			"fps": 24,
+			"anim": "cheer",
+			"indices": [],
+			"name": "gf cheer"
+		},
+		{
+			"offsets": [0, -9],
+			"loop": false,
+			"fps": 24,
+			"anim": "combo50",
+			"indices": [],
+			"name": "gf cheer"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/redux/gf_manifest_redux",
+	"position": [140, 150],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [255, 0, 0],
+	"camera_position": [-150, -10],
+	"sing_duration": 4,
+	"scale": 1.7
+}

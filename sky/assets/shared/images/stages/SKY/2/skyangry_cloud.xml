@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="skyangry_cloud.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="messy_cloud0000" x="0" y="0" width="1284" height="184" frameX="2" frameY="2" frameWidth="1280" frameHeight="200"/>
+	<SubTexture name="messy_cloud0001" x="0" y="184" width="1284" height="178" frameX="2" frameY="2" frameWidth="1280" frameHeight="200"/>
+	<SubTexture name="messy_cloud0002" x="0" y="362" width="1284" height="157" frameX="2" frameY="2" frameWidth="1280" frameHeight="200"/>
+</TextureAtlas>

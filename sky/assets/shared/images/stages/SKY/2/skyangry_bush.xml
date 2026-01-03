@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="skyangry_bush.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="messy_bush0000" x="0" y="162" width="1282" height="160" frameX="2" frameY="-45" frameWidth="1280" frameHeight="250"/>
+	<SubTexture name="messy_bush0001" x="0" y="322" width="1284" height="145" frameX="2" frameY="-59" frameWidth="1280" frameHeight="250"/>
+	<SubTexture name="messy_bush0002" x="0" y="0" width="1284" height="162" frameX="2" frameY="-48" frameWidth="1280" frameHeight="250"/>
+</TextureAtlas>

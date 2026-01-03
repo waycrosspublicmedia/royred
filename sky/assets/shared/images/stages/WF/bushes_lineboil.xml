@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bushes_lineboil.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="bushes0000" x="0" y="130" width="1284" height="130" frameX="2" frameY="-72" frameWidth="1280" frameHeight="235"/>
+	<SubTexture name="bushes0001" x="0" y="260" width="1284" height="130" frameX="2" frameY="-72" frameWidth="1280" frameHeight="235"/>
+	<SubTexture name="bushes0002" x="0" y="0" width="1284" height="130" frameX="2" frameY="-72" frameWidth="1280" frameHeight="235"/>
+</TextureAtlas>

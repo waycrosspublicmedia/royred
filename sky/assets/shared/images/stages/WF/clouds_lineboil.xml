@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="clouds_lineboil.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="clouds0000" x="0" y="125" width="415" height="125" frameX="-13" frameY="-64" frameWidth="470" frameHeight="250"/>
+	<SubTexture name="clouds0001" x="0" y="0" width="415" height="125" frameX="-13" frameY="-64" frameWidth="470" frameHeight="250"/>
+	<SubTexture name="clouds0002" x="0" y="250" width="415" height="124" frameX="-13" frameY="-65" frameWidth="470" frameHeight="250"/>
+</TextureAtlas>

@@ -1,0 +1,12 @@
+{
+	
+	"image": "gflol",
+	"position": [
+		-50,
+		0
+	],
+	"scale": 1,
+	"idle_anim": "idle",
+	"confirm_anim": "idle",
+	"antialiasing": false
+}

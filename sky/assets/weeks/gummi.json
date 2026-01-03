@@ -1,0 +1,54 @@
+{
+	"songs": [
+		[
+			"wife-forever",
+			"sky",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"sky",
+			"sky",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"manifest",
+			"goat-sky",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"difficulties": "hard",
+	"weekCharacters": [
+		"sky",
+		"bflol",
+		"gflol"
+	],
+	"storyName": "HEARTBREAK HAVOC",
+	"weekName": "Sky Redux Port",
+	"weekCharacters": [
+		"sky",
+		"bflol",
+		"gflol"
+	],
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

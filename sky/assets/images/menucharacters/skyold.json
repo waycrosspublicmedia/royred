@@ -1,0 +1,9 @@
+{
+	"idle_anim": "sky idle",
+	"image": "sky_story_assets",
+	"position": [
+		45,
+		-20
+	],
+	"scale": 1
+}

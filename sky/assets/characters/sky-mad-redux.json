@@ -1,0 +1,125 @@
+{
+	"animations": [
+		{
+			"offsets": [-50, -280],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+			"name": "idle"
+		},
+		{
+			"offsets": [90, -238],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [82, -492],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [20, -146],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [-39, -237],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [199, -266],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "alt left"
+		},
+		{
+			"offsets": [75, -385],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "alt down"
+		},
+		{
+			"offsets": [8, 37],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "alt up"
+		},
+		{
+			"offsets": [-40, -270],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "alt right"
+		},
+		{
+			"offsets": [71, -188],
+			"loop": false,
+			"fps": 24,
+			"anim": "scream",
+			"indices": [],
+			"name": "scream"
+		},
+		{
+			"offsets": [155, -205],
+			"loop": false,
+			"fps": 18,
+			"anim": "trans1",
+			"indices": [0, 1, 2],
+			"name": "transform"
+		},
+		{
+			"offsets": [145, -215],
+			"loop": false,
+			"fps": 18,
+			"anim": "trans2",
+			"indices": [3, 4, 5],
+			"name": "transform"
+		},
+		{
+			"offsets": [145, -205],
+			"loop": false,
+			"fps": 18,
+			"anim": "trans3",
+			"indices": [6, 7, 8, 9],
+			"name": "transform"
+		},
+		{
+			"offsets": [140, -205],
+			"loop": false,
+			"fps": 18,
+			"anim": "trans4",
+			"indices": [10, 11, 12, 13],
+			"name": "transform"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/redux/sky_manifest",
+	"position": [-50, -60],
+	"healthicon": "manifest-sky",
+	"flip_x": false,
+	"healthbar_colors": [255, 0, 0],
+	"camera_position": [0, 130],
+	"sing_duration": 6.1,
+	"scale": 1.66
+}

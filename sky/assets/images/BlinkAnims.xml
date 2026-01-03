@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BlinkAnims.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="Blink0000" x="0" y="0" width="327" height="318" frameX="2" frameY="2" frameWidth="323" frameHeight="320"/>
+	<SubTexture name="Blink0001" x="327" y="0" width="327" height="300" frameX="2" frameY="-16" frameWidth="323" frameHeight="320"/>
+	<SubTexture name="Blink0002" x="319" y="318" width="319" height="224" frameX="2" frameY="-88" frameWidth="315" frameHeight="320"/>
+	<SubTexture name="Blink0003" x="654" y="0" width="303" height="176" frameX="2" frameY="-143" frameWidth="299" frameHeight="320"/>
+	<SubTexture name="Blink0004" x="0" y="542" width="304" height="167" frameX="2" frameY="-153" frameWidth="300" frameHeight="320"/>
+	<SubTexture name="Blink0005" x="304" y="542" width="304" height="152" frameX="2" frameY="-168" frameWidth="300" frameHeight="320"/>
+	<SubTexture name="Blink0006" x="304" y="542" width="304" height="152" frameX="2" frameY="-168" frameWidth="300" frameHeight="320"/>
+	<SubTexture name="Blink0007" x="0" y="542" width="304" height="167" frameX="2" frameY="-153" frameWidth="300" frameHeight="320"/>
+	<SubTexture name="Blink0008" x="654" y="0" width="303" height="176" frameX="2" frameY="-143" frameWidth="299" frameHeight="320"/>
+	<SubTexture name="Blink0009" x="0" y="318" width="319" height="224" frameX="2" frameY="-88" frameWidth="315" frameHeight="320"/>
+	<SubTexture name="Blink0010" x="327" y="0" width="327" height="300" frameX="2" frameY="-16" frameWidth="323" frameHeight="320"/>
+	<SubTexture name="Blink0011" x="327" y="0" width="327" height="300" frameX="2" frameY="-16" frameWidth="323" frameHeight="320"/>
+	<SubTexture name="Blink0012" x="0" y="0" width="327" height="318" frameX="2" frameY="2" frameWidth="323" frameHeight="320"/>
+	<SubTexture name="Blink0013" x="0" y="0" width="327" height="318" frameX="2" frameY="2" frameWidth="323" frameHeight="320"/>
+</TextureAtlas>

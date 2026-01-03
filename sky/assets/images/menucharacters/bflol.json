@@ -1,0 +1,12 @@
+{
+	
+	"image": "bflol",
+	"position": [
+		35,
+		-18
+	],
+	"scale": 1,
+	"idle_anim": "idle",
+	"confirm_anim": "confirm",
+	"antialiasing": false
+}

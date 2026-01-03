@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TextureAtlas imagePath="sky_ratings.png" width="678" height="559">
+	<SubTexture name="killer" x="1" y="1" width="676" height="128" frameX="-0" frameY="-0" frameWidth="676" frameHeight="128"/>
+	<SubTexture name="lame" x="1" y="287" width="532" height="128" frameX="-142" frameY="-0" frameWidth="676" frameHeight="128"/>
+	<SubTexture name="sweet" x="1" y="144" width="636" height="128" frameX="-38" frameY="-0" frameWidth="676" frameHeight="128"/>
+	<SubTexture name="wtf" x="1" y="430" width="424" height="128" frameX="-250" frameY="-0" frameWidth="676" frameHeight="128"/>
+</TextureAtlas>

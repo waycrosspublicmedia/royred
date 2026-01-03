@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="hearts.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="hearts0000" x="0" y="0" width="28" height="27" frameX="-2" frameY="-39" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0001" x="0" y="0" width="28" height="27" frameX="-2" frameY="-39" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0002" x="28" y="0" width="441" height="150" frameX="0" frameY="-37" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0003" x="28" y="0" width="441" height="150" frameX="0" frameY="-37" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0004" x="469" y="0" width="443" height="209" frameX="0" frameY="-38" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0005" x="469" y="0" width="443" height="209" frameX="0" frameY="-38" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0006" x="0" y="209" width="442" height="245" frameX="0" frameY="-3" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0007" x="0" y="209" width="442" height="245" frameX="0" frameY="-3" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0008" x="442" y="209" width="442" height="247" frameX="0" frameY="0" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0009" x="442" y="209" width="442" height="247" frameX="0" frameY="0" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0010" x="0" y="456" width="420" height="247" frameX="-23" frameY="0" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0011" x="0" y="456" width="420" height="247" frameX="-23" frameY="0" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0012" x="420" y="456" width="406" height="248" frameX="-22" frameY="0" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0013" x="420" y="456" width="406" height="248" frameX="-22" frameY="0" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0014" x="826" y="456" width="29" height="26" frameX="-398" frameY="-3" frameWidth="443" frameHeight="248"/>
+	<SubTexture name="hearts0015" x="826" y="456" width="29" height="26" frameX="-398" frameY="-3" frameWidth="443" frameHeight="248"/>
+</TextureAtlas>

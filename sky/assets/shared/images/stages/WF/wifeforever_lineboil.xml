@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="wifeforever_lineboil.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="hilltop0000" x="0" y="604" width="1283" height="301" frameX="2" frameY="-28" frameWidth="1280" frameHeight="350"/>
+	<SubTexture name="hilltop0001" x="0" y="302" width="1283" height="302" frameX="2" frameY="-28" frameWidth="1280" frameHeight="350"/>
+	<SubTexture name="hilltop0002" x="0" y="0" width="1284" height="302" frameX="2" frameY="-27" frameWidth="1280" frameHeight="350"/>
+</TextureAtlas>

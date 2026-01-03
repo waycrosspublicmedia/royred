@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tree_lineboil.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="tree0000" x="0" y="0" width="993" height="533" frameX="-14" frameY="2" frameWidth="1050" frameHeight="550"/>
+	<SubTexture name="tree0001" x="993" y="0" width="993" height="533" frameX="-14" frameY="2" frameWidth="1050" frameHeight="550"/>
+	<SubTexture name="tree0002" x="0" y="533" width="992" height="533" frameX="-15" frameY="2" frameWidth="1050" frameHeight="550"/>
+</TextureAtlas>

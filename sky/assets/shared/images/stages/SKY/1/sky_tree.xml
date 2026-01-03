@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sky_tree.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="sky_tree0000" x="981" y="0" width="982" height="531" frameX="-25" frameY="2" frameWidth="1050" frameHeight="550"/>
+	<SubTexture name="sky_tree0001" x="0" y="0" width="981" height="532" frameX="-26" frameY="2" frameWidth="1050" frameHeight="550"/>
+	<SubTexture name="sky_tree0002" x="0" y="532" width="980" height="531" frameX="-27" frameY="2" frameWidth="1050" frameHeight="550"/>
+</TextureAtlas>

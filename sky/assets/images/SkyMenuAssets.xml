@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="SkyMenuAssets.png" width="4096" height="4096">
+	<SubTexture name="story_selected0000" x="2346" y="2697" width="1150" height="446" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="446"/>
+	<SubTexture name="story_selected0001" x="1174" y="3614" width="1150" height="446" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="446"/>
+	<SubTexture name="story_selected0002" x="2324" y="3168" width="1150" height="446" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="446"/>
+	<SubTexture name="story_selected0003" x="2324" y="3614" width="1150" height="446" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="446"/>
+	<SubTexture name="story_selected0004" x="1174" y="3168" width="1150" height="446" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="446"/>
+	<SubTexture name="story_idle0000" x="2346" y="2251" width="1150" height="446" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="446"/>
+	<SubTexture name="story_idle0001" x="1174" y="3168" width="1150" height="446" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="446"/>
+	<SubTexture name="freeplay_selected0000" x="2" y="1822" width="1150" height="444" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="444"/>
+	<SubTexture name="freeplay_selected0001" x="1174" y="1348" width="1150" height="444" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="444"/>
+	<SubTexture name="freeplay_selected0002" x="2324" y="912" width="1150" height="444" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="444"/>
+	<SubTexture name="freeplay_selected0003" x="2" y="2266" width="1150" height="444" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="444"/>
+	<SubTexture name="freeplay_selected0004" x="1152" y="1822" width="1150" height="444" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="444"/>
+	<SubTexture name="freeplay_idle0000" x="1174" y="912" width="1150" height="436" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="436"/>
+	<SubTexture name="freeplay_idle0001" x="2346" y="457" width="1150" height="436" frameX="-0" frameY="-0" frameWidth="1150" frameHeight="436"/>
+	<SubTexture name="options_selected0000" x="2302" y="1800" width="1172" height="451" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="451"/>
+	<SubTexture name="options_selected0001" x="2" y="3154" width="1172" height="451" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="451"/>
+	<SubTexture name="options_selected0002" x="1174" y="2266" width="1172" height="451" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="451"/>
+	<SubTexture name="options_selected0003" x="2" y="3605" width="1172" height="451" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="451"/>
+	<SubTexture name="options_selected0004" x="1174" y="2717" width="1172" height="451" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="451"/>
+	<SubTexture name="options_idle0000" x="2324" y="1356" width="1172" height="444" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="444"/>
+	<SubTexture name="options_idle0001" x="2" y="2710" width="1172" height="444" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="444"/>
+	<SubTexture name="credits_selected0000" x="1174" y="2" width="1172" height="455" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="455"/>
+	<SubTexture name="credits_selected0001" x="2" y="912" width="1172" height="455" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="455"/>
+	<SubTexture name="credits_selected0002" x="1174" y="457" width="1172" height="455" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="455"/>
+	<SubTexture name="credits_selected0003" x="2346" y="2" width="1172" height="455" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="455"/>
+	<SubTexture name="credits_selected0004" x="2" y="1367" width="1172" height="455" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="455"/>
+	<SubTexture name="credits_idle0000" x="2" y="2" width="1172" height="455" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="455"/>
+	<SubTexture name="credits_idle0001" x="2" y="457" width="1172" height="455" frameX="-0" frameY="-0" frameWidth="1172" frameHeight="455"/>
+</TextureAtlas>

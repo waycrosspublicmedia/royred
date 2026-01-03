@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BlushAnims.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="Blush0000" x="0" y="79" width="112" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0001" x="0" y="79" width="112" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0002" x="0" y="79" width="112" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0003" x="0" y="79" width="112" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0004" x="112" y="79" width="109" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0005" x="112" y="79" width="109" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0006" x="112" y="79" width="109" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0007" x="112" y="79" width="109" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0008" x="0" y="0" width="117" height="79" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0009" x="0" y="0" width="117" height="79" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0010" x="0" y="0" width="117" height="79" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0011" x="0" y="0" width="117" height="79" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0012" x="112" y="79" width="109" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0013" x="112" y="79" width="109" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0014" x="112" y="79" width="109" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0015" x="112" y="79" width="109" height="73" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0016" x="117" y="0" width="111" height="75" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0017" x="117" y="0" width="111" height="75" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0018" x="117" y="0" width="111" height="75" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+	<SubTexture name="Blush0019" x="117" y="0" width="111" height="75" frameX="-3" frameY="-1" frameWidth="120" frameHeight="80"/>
+</TextureAtlas>

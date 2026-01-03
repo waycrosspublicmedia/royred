@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [9, -4],
+			"anim": "idle",
+			"fps": 12,
+			"name": "bf idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [60, -2],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "bf left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [28, -56],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "bf down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-40, 46],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "bf up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-12, 0],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "bf right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [46, 18],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "LM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [16, -24],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "DM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-40, 46],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "UM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-12, 30],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "RM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [268, 54],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "bf dies",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [268, 44],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "bf death loop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [268, 58],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "bf death confirm",
+			"indices": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/redux/Boyfriend_Sprites",
+	"position": [60, 85],
+	"healthicon": "bf-manifest",
+	"flip_x": true,
+	"healthbar_colors": [255, 255, 255],
+	"camera_position": [-100, -20],
+	"sing_duration": 8,
+	"scale": 1.33,
+	"_editor_isPlayer": true
+}
